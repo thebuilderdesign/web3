@@ -1,0 +1,55 @@
+announce people with this asap to make it done quick.
+draft plan. could be changed.
+
+in few day, v1 rebase will be disabled
+before v2 presale start, v1 trade will be disabled
+after v2 launch, rebase will turn on
+
+v1 supply = 289,000
+cur liquidity = 4,100 TWEP / 1,300 BNB
+cur price = 0.317 BNB ($73.5)
+to make clean number,
+add 11,000 and make x10000 split
+
+Total supply = 3,000,000,000 (3B) (100%)
+Locked = 2,100,000,000 (2.1B) (70%) = company ownership, future use, vested 
+Reserved = 300,000,000 (300M) (10%) = for presale
+Migration = 300,000,000 (300M) (10%) = locked until v2 launch
+Burned = 270,000,000 (270M) (9%) = burn more if reserve left more
+presale = 30,000,000 (30M) (1%) = 0.01% for pink fee
+
+
+
+migration
+all users will manually claim for v2
+1 TWEP = 10,000 WEB3v2
+due to wweb3 and many things, this is safe and fair for all
+
+pinksale fair launch, liq 100%
+target raise 500 BNB, pink fee 2% bnb = 10 BNB
+target liquidity = 490 BNB
+target token liq = 15,000,000 pink fee 2% token = 300,000
+token for presalers = 15,000,000
+new price = 0.326 BNB / 10000 ($0.0735+)
+total token amount = 30,000,000
+
+if raised x1/5, lower price. give x50000, can give max x80000
+if raised x5, higher price. give x2000
+
+tokenomics
+4% liquidity (by using 4% token, it is 8%)
+4% twt
+1% wtf = miner/xweb
+1% burn = burn by buyback for certik audit]. it will be changed later
+
+
+The Web3 Project
+0x55f3665050F12482C7110204Ba6ADb1BdF013B1f
+The Web3 Project: Owner
+0x495987fFDcbb7c04dF08c07c6fD7e771Dba74175
+The Web3 Project: Auto-Liquidity
+0x4De7Bd1387A46F4D86fCDEB495AC265989C75136
+The Web3 Project: Web3 Trust Fund
+0x5060E2fBB789c021C9b510e2eFd9Bf965e6a2475
+The Web3 Project: Treasury
+0xcCa3C1D62C80834f8B303f45D89298866C097B1a

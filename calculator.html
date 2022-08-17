@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" style=" background-image: radial-gradient(circle farthest-corner at 50% 50%,#424750,#202326);">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fa.css">
+
+  <title>The Web3 Project | Taking online further beyond</title>
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" name="description">
+  <meta content="The Web3 Project | Taking online further beyond" property="og:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="og:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="og:image">
+  <meta content="The Web3 Project | Taking online further beyond" property="twitter:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="twitter:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+   
+  <link href="images/logos/TWEP/TWEP.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="images/logos/TWEP/TWEP.png" rel="apple-touch-icon" />
+
+  <meta name="twitter:image" content="images/logos/TWEP/TWEP.png">
+  <meta name="twitter:description" content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Web3 Project | Taking online further beyond">
+
+  <meta property="og:image" content="images/logos/TWEP/TWEP.png">
+  <link rel="stylesheet" href="css/flooz.css">
+</head>
+<body id="titano-finance" class="background">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebarContainer" class="col-auto" style="z-index: 1000002;">      
+      </div>
+
+      <div id="overlay" style="z-index: 1000001;"></div>
+
+      <main id='main'>
+        <div id="web3-header">
+        </div>
+
+        <div id="container">
+          <div class="my-5 col-12">
+            <div id='card'>
+              <span class="fw-medium ms-1">
+                Estimate Your Return <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                Always check dashboard page and community for latest upate!
+                "></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="my-5 col-12">
+            <div id='card'>
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">$TWEP Price</div>
+                  <h4 id="price" class="fw-bold">$0.000</h4>
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">Your Balance</div>
+                  <h4 id="twepBalance" class="fw-bold">0.000</h4>
+                </div>           
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="my-5 col-12">
+            <div class="card bg-light p-4 shadow-custom" >
+
+              <div class="row mt-5">
+                <div class="col-sm-6">
+                  <label for="amount" class="form-label fw-medium">TWEP Amount</label>
+                  <div class="input-group  rounded-1 mb-5">
+                    <input type="text" id="amount" class="form-control py-2 text-secondary" aria-describedby="amount-addon" value="10" placeholder="Amount" style="background-color: #424750; border: none;">
+                    <span id="setMaxToAmount" class="input-group-text " style=" background-color: #424750; border:none;">MAX</span>
+                  </div>
+
+
+                  <label for="price" class="form-label fw-medium">TWEP price at purchase ($)</label>
+                  <div class="input-group  rounded-1 mb-5">
+                    <input type="text" id="curPrice" class="form-control py-2 text-secondary" aria-describedby="price-addon" value="0" placeholder="Amount" style="background-color: #424750; border:none;">
+                    <span id="setCurToCurPrice" class="input-group-text " style="background-color: #424750; border: none;">Current</span>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label class="form-label fw-medium">Future TWEP Amount <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    Total Supply increases 1440 per day<br/>
+                    For event, currently <span class='text-success'>2880</span> per day<br/>
+                    "></i>
+                  </label>
+                  <div class="input-group  rounded-1 mb-5">
+                    <input type="text" id="futAmount" class="form-control py-2 text-secondary" aria-describedby="apy-addon" value="10" placeholder="Amount" style="background-color: #424750; border:none;">
+                    <!-- <span id="setCurToFutAmount" class="input-group-text rounded-1 border-0">Current</span> -->
+                  </div>
+
+
+                  <label for="future-price" class="form-label fw-medium">Future TWEP price ($) <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    This price happens automatically<br/>
+                    when buy/sell amount is similar.<br/>
+                    it may go up or down from that price depending on the buy/sell amount.
+                    "></i>
+                  </label>
+                  <div class="input-group rounded-1 mb-5">
+                    <input type="text" id="futPrice" class="form-control py-2  text-secondary" aria-describedby="future-price-addon" value="0" placeholder="Amount" style="background-color: #424750; border:none;">
+                    <span id="setCurToFutPrice" class="input-group-text " style="background-color: #424750; border:none;">Current</span>
+                  </div>
+                </div>
+              </div>
+
+              <label for="days-slider" class="fw-medium"><span id="days">30</span> days</label>
+              <input id="days-slider" type="range" min="1" max="365" step="1" value="30" class="mb-5">
+
+              <div class="row justify-centent-between text-secondary">
+                <div class="col">
+                  Your initial investment
+                </div>
+
+                <div id="initInvest" class="col-auto">
+                  $0.00
+                </div>
+              </div>
+
+              <div class="row justify-centent-between mt-4 text-secondary">
+                <div class="mt-2 col">
+                  Future wealth
+                </div>
+
+                <div id="futWealth" class="mt-2 col-auto">
+                  $0.00
+                </div>
+              </div>
+
+              <div class="row justify-centent-between mt-4 text-secondary">
+                <div class="mt-2 col">
+                  TWEP rewards
+                </div>
+
+                <div id="rewardsEsti" class="mt-2 col-auto">
+                  0.00 TWEP
+                </div>
+              </div>
+
+              <div class="row justify-centent-between mt-4 text-secondary">
+                <div class="mt-2 col">
+                  Potential return
+                </div>
+
+                <div id="potenReturn" class="mt-2 col-auto">
+                  $0.00
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" id="showMsg" data-toggle="modal" data-target="#msgModal" style="display:none;"></button>
+
+        <div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog my-5" role="document" style="max-width: 1000px;">
+            <div class="modal-content" style="background-color: #313131;">
+              <div class="modal-header">
+              </div>
+              <div class="modal-body">
+                <h4 id="msgResult" class="fw-bold">
+                </h4>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/page.js"></script>
+
+  <script>
+    document.getElementById("showSidebar").addEventListener("click", function () {
+      document.getElementById("sidebarContainer").classList.add("show");
+      document.getElementById("overlay").style.display = "block"
+    })
+
+    document.getElementById("overlay").addEventListener("click", function () {
+      document.getElementById("sidebarContainer").classList.remove("show");
+      document.getElementById("overlay").style.display = "none"
+    })
+  </script>
+
+  <script>
+
+    async function runGlobal() {
+      await _runGlobal();
+    }
+    async function runPersonal() {
+      await _runPersonal();
+    }
+    
+
+    (async () => {
+      // do global
+      await runGlobal();
+
+      // let curBlock = await PROVIDER.getBlock();
+      // curBlock = curBlock['number'];
+      // let lastRebaseBlock = await CONTS['twep']._lastRebaseBlock();
+      // lastRebaseBlock = INT(lastRebaseBlock);
+      // let lastRebaseTime = (curBlock - lastRebaseBlock) * 3;
+      // displayText("#lastRebase", `${lastRebaseBlock}, ${curBlock}, ${lastRebaseTime}`);
+      
+
+      ////////////////////////////////////////////////////////////////////////////
+
+      select('#curPrice').value = `${COMMA(INT((await gV('price')), 3))}`;
+      select('#futPrice').value = `${COMMA(INT((await gV('price')), 3))}`;
+
+      
+      select('#setMaxToAmount').onclick = async () => {
+        select('#amount').value = (await gV('twepBalance'));
+      };
+      select('#setCurToApy').onclick = async () => {
+        select('#input-apy').value = 404092.65;
+      };
+      select('#setCurToCurPrice').onclick = async () => {
+        select('#curPrice').value = INT((await gV('price')), 3);
+      };
+      select('#setCurToFutPrice').onclick = async () => {
+        select('#futPrice').value = INT((await gV('price')), 3);
+        changedValue('futPrice', select('#futPrice'));
+      };
+
+
+      $('[data-bs-toggle="tooltip"]').tooltip();
+
+      await getCurAdr();
+      if (CURADR == null) {
+        // connect wallet button
+        return;
+      }
+      await runPersonal();
+
+      // let [res, data] = await GAS('twep', 'manualRebase', []);
+      // if (res == true) {
+      //   return;
+      // } else {
+      //   gasEstimation = data;
+      //   displayText("#lastRebase", `${lastRebaseBlock}, ${curBlock}, ${lastRebaseTime}, ${gasEstimation}`);
+      // }
+      $('[data-bs-toggle="tooltip"]').tooltip();
+      
+    })();
+
+
+    $('input[type="range"]').rangeslider({});
+
+    $(document).on('input', '#days-slider', function (e) {
+      changedValue('days', select('#days-slider'));
+    });
+
+    $(document).on('input', '#futPrice', function (e) {
+      changedValue('futPrice', select('#futPrice'));
+    });
+
+    $(function () {
+      $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+
+    select('#sidebar-nav').children[2].classList.add('active-neumorphism');
+  </script>
+
+</body>
+</html>

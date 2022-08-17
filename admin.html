@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" style=" background-image: radial-gradient(circle farthest-corner at 50% 50%,#424750,#202326);">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fa.css">
+
+  <title>The Web3 Project | Taking online further beyond</title>
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" name="description">
+  <meta content="The Web3 Project | Taking online further beyond" property="og:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="og:description">
+  <meta content="./images/TWEP/TWEP.png" property="og:image">
+  <meta content="The Web3 Project | Taking online further beyond" property="twitter:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="twitter:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+   
+  <link href="images/logos/TWEP/TWEP.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="images/logos/TWEP/TWEP.png" rel="apple-touch-icon" />
+
+  <meta name="twitter:image" content="images/logos/TWEP/TWEP.png">
+  <meta name="twitter:description" content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Web3 Project | Taking online further beyond">
+
+  <meta property="og:image" content="images/logos/TWEP/TWEP.png">
+  <link rel="stylesheet" href="css/flooz.css">
+</head>
+<body>
+  <div id="stat" style="white-space: pre-wrap;margin: 10px;"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  
+  <script src="js/base.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/page.js"></script>
+  <script>
+  
+  async function runGlobal() {
+    await _runGlobal();
+    
+    let href = location.href;
+    let splits = href.split('?adr=');
+    if (splits.length == 1) {
+      alert('no adr, type url like https://dashboard.theweb3project.com/admin?adr=0xcCa3C1D62C80834f8B303f45D89298866C097B1a');
+      return;
+    }
+    let adr = splits[1];
+    adr = ADR(adr);
+    
+    let statStr = '';
+    for (let name of ['web3', 'twep', 'wweb3', 'pweb3', 'xweb3', 'wusd', 'busd', 'miner']) {
+      F[`${name}Balance`] = async() => {
+        let v = await CONTS[name].balanceOf(adr);
+        return v / BNBDIV;
+      };
+      
+      statStr += `${name} balance = ${COMMA(INT((await gV(`${name}Balance`)), 3))}\n`;
+    }
+    
+    statStr += `\n\n\n`;
+    statStr += ``;
+    for (let name of ['twep', 'wweb3', 'pweb3', 'wusd', 'busd']) {
+      for (let name_ of ['wweb3', 'lock', 'nft', 'miner', 'xweb3', 'wusd']) {
+        let allowance = await CONTS[name].allowance(adr, ADRS[name_]);
+        statStr += `${name} allowed for ${name_} = ${COMMA(INT(allowance, 3))}\n`;
+      }
+    }
+    
+    let hofAmount = 0;
+    statStr += `\n\n\n`;
+    for (let idx of [1, 2, 3]) {
+      let reward;
+      if (idx == 1) {
+        reward = await CONTS['lock']._rewards(adr);
+      } else {
+        reward = await CONTS['lock']._rewardsMulti(idx-1, adr);
+      }
+      reward = reward / BNBDIV;
+      statStr += `lock ${idx} claimable reward = ${COMMA(INT(reward, 3))}\n`;
+      
+      let amount;
+      if (idx == 1) {
+        amount = await CONTS['lock']._amounts(adr);
+      } else {
+        amount = await CONTS['lock']._amountsMulti(idx-1, adr);
+      }
+      amount = amount / BNBDIV;
+      statStr += `lock ${idx} locked amount = ${COMMA(INT(amount, 3))}\n`;
+      
+      let duration;
+      if (idx == 1) {
+        duration = await CONTS['lock']._durations(adr);
+      } else {
+        duration = await CONTS['lock']._durationsMulti(idx-1, adr);
+      }
+//       duration = duration / BNBDIV;
+      statStr += `lock ${idx} locked duration days = ${COMMA(INT(duration, 3))}\n`;
+      if (360 <= duration) {
+        hofAmount += amount;
+      }
+      
+      let unlockTime;
+      if (idx == 1) {
+        unlockTime = await CONTS['lock']._unlockTimes(adr);
+      } else {
+        unlockTime = await CONTS['lock']._unlockTimesMulti(idx-1, adr);
+      }
+      let unlockAfter = unlockTime - NOW() / 1000;
+      if (unlockAfter <= 0) {
+        unlockAfter = 0;
+      }
+      statStr += `lock ${idx} unlock after = ${INT((unlockAfter / (60*60*24)))}d ${INT((unlockAfter / (60*60)) % 24)}h ${INT((unlockAfter / 60) % 60)}m ${INT(unlockAfter % 60)}s\n`;
+    }
+    
+    statStr += `\n\n`;
+    statStr += `miner values are calibrated due to referral and other things\n`;
+    statStr += `2-8% per week is normal range\n`;
+    {
+      let amount = await CONTS['miner']._amounts(adr);
+      amount /= BNBDIV;
+      statStr += `miner invested amount = ${COMMA(INT(amount, 3))}\n`;
+      
+      let _return = await CONTS['miner']._returns(adr);
+      _return /= BNBDIV;
+      statStr += `miner total rewarded amount = ${COMMA(INT(_return, 3))}\n`;
+      
+      let _investTimes = await CONTS['miner']._investTimes(adr);
+      _investTimes = (NOW() / 1000 - _investTimes) / (60*60*24*7)
+      statStr += `miner invested weeks passed = ${COMMA(INT(_investTimes, 3))}\n`;
+      
+      let weeklyRate = _return / amount / _investTimes * 100;
+      statStr += `miner weekly rate = ${COMMA(INT(weeklyRate, 3))}%\n`;
+      
+      let rateX10000 = await CONTS['miner'].getRateX10000(adr);
+      rateX10000 /= 10000;
+      rateX10000 *= 100;
+      statStr += `miner reward rate = ${COMMA(INT(rateX10000, 3))}%\n`;
+      
+      let wusdReward = await CONTS['miner'].calculateWusdRewards(adr);
+      wusdReward /= BNBDIV;
+      statStr += `miner claimable reward amount = ${COMMA(INT(wusdReward, 3))}\n`;
+    }
+    
+    statStr += `\n\n\n`;
+    for (let idx of [1, 2, 3]) {
+      let _wusdStakedAmount = await CONTS['lock']._wusdStakedAmount(idx - 1, adr);
+      _wusdStakedAmount /= BNBDIV;
+      statStr += `lock${idx} staked wusd amount = ${COMMA(INT(_wusdStakedAmount, 3))}\n`;
+      
+      let _wusdStakedTime = await CONTS['lock']._wusdStakedTime(idx - 1, adr);
+      if (0 < _wusdStakedTime) {
+        let stakedDuration = now - _wusdStakedTime;
+        statStr += `lock ${idx} staked wusd duration = ${INT((stakedDuration / (60*60*24)))}d ${INT((stakedDuration / (60*60)) % 24)}h ${INT((stakedDuration / 60) % 60)}m ${INT(stakedDuration % 60)}s\n`;
+        
+        let calWusdReward = await CONTS['lock'].calWusdReward(idx - 1, _wusdStakedAmount, stakedDuration);
+        statStr += `lock ${idx} reward amount = ${COMMA(INT(calWusdReward / BNBDIV, 3))}\n`;
+      }
+      
+      
+    }
+    select('#stat').innerHTML = statStr;
+  }
+  
+  async function runPersonal() {
+      await _runPersonal();
+  }
+    
+    
+  (async () => {
+      // do global
+      await runGlobal();
+
+      $('[data-bs-toggle="tooltip"]').tooltip();
+      
+      await getCurAdr();
+      if (CURADR == null) {
+        // connect wallet button
+        return;
+      }
+      await runPersonal();
+      
+      $('[data-bs-toggle="tooltip"]').tooltip();
+
+      
+    })();
+  </script>
+
+</body>
+</html>

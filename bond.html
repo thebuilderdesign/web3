@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="
+    background-image: radial-gradient(
+      circle farthest-corner at 50% 50%,
+      #424750,
+      #202326
+    );
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fa.css" />
+
+    <title>The Web3 Project | Taking online further beyond</title>
+    <meta
+      content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!"
+      name="description"
+    />
+    <meta
+      content="The Web3 Project | Taking online further beyond"
+      property="og:title"
+    />
+    <meta
+      content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!"
+      property="og:description"
+    />
+    <meta
+      content="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png"
+      property="og:image"
+    />
+    <meta
+      content="The Web3 Project | Taking online further beyond"
+      property="twitter:title"
+    />
+    <meta
+      content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!"
+      property="twitter:description"
+    />
+    <meta
+      content="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png"
+      property="twitter:image"
+    />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link
+      href="./images/logos/web.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+    href="./images/logos/web.png"
+      rel="apple-touch-icon"
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png"
+    />
+    <meta
+      name="twitter:description"
+      content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="The Web3 Project | Taking online further beyond"
+    />
+
+    <meta
+      property="og:image"
+      content="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png"
+    />
+
+    <link rel="stylesheet" href="css/flooz.css" />
+  </head>
+
+  <body
+    id="titano-finance"
+   class="background"
+  >
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          id="sidebarContainer"
+          class="col-auto"
+          style="z-index: 1000002"
+        ></div>
+
+        <div id="overlay" style="z-index: 1000001"></div>
+
+        <main id='main'>
+          <div id="web3-header">
+          </div>
+  
+          <div id="container">
+            <div class="my-5 col-12">
+              <div id='card'>
+                <span class="fw-medium ms-1">
+                  Buy/Sell $TWEP in instance <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                  No need to care slippage or anything
+                  "></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="my-5 col-12">
+              <div id='card'>
+                <div id="run-web3-approve-router" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                  <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon custom-button" >
+                    <span class="button__content">$TWEP Approve to sell</span>
+                  </button>
+                </div>
+  
+                <div class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form__token-pair" style="margin: 10px 0; box-shadow: inset 2px 2px 9px 0 rgb(17 19 20 / 90%), inset -2px -2px 9px 0 rgb(93 100 112 / 90%);  background-image: linear-gradient(160deg,#424750,#202326);">
+                  <div class="stack-layout d-flex flex-sm-row flex-column stack-layout--gap-100 stack-layout--direction-row stack-layout--align-items-center stack-layout--justify-content-space-between token-field">
+                      <div class="stack-layout stack-layout--gap-0 stack-layout--direction-column stack-layout--align-items-start token-amount-field">
+                          <div class="stack-layout stack-layout--gap-0 stack-layout--direction-row stack-layout--align-items-baseline">
+                              <div class="stack-layout stack-layout--gap-50 stack-layout--direction-column input-field">
+                                  <input id="swap-input" class="input-field__input" placeholder="0.00" name="fromTokenAmount" inputmode="decimal" autocomplete="off" value="" style="max-width: 16ch;" />
+                              </div>
+                              <!-- <button type="button" class="button button--secondary button--size-small button--icon-left token-amount-field__max button--with-icon"><span class="button__content">MAX</span></button> -->
+                          </div>
+                          <p class="token-amount-field__balance">Balance: <span id="swap-balance-input">0.000</span></p>
+                      </div>
+                      <button type="button" onclick="maxValueSwapInput()" class="d-flex d-sm-block button button--secondary button--size-small button--icon-left token-field__token-btn button--with-icon" style="background-image: linear-gradient(160deg,#424750,#202326); border: none;">
+                          <div class="stack-layout stack-layout--gap-50 stack-layout--direction-row stack-layout--align-items-center token ellipsis">
+                            <div>Max</div>
+                            <div class="token-logo"><img id="swap-logo-input" src="images/bnb-icon.png" class="token-logo__image" alt="Token logo"></div>
+                            <span id="swap-symbol-input" class="token__symbol ellipsis">BNB</span>
+                              <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18" class="icon token__verified">
+                                  <path
+                                      d="m9.015 1.254 1.233-.63c.568-.29 1.256-.057 1.553.528l.643 1.265c.17.334.478.567.835.633l1.351.247c.624.115 1.048.724.96 1.38l-.193 1.417a1.26 1.26 0 0 0 .32 1.024l.953 1.03c.44.474.44 1.229 0 1.704l-.954 1.03a1.26 1.26 0 0 0-.319 1.024l.193 1.418c.088.654-.336 1.264-.96 1.379l-1.351.247c-.357.066-.665.3-.835.633l-.643 1.265c-.297.584-.984.817-1.553.527l-1.232-.629a1.13 1.13 0 0 0-1.032 0l-1.232.63c-.568.29-1.256.057-1.553-.528l-.643-1.266a1.181 1.181 0 0 0-.835-.633l-1.351-.247c-.624-.115-1.048-.724-.96-1.38l.193-1.417a1.26 1.26 0 0 0-.32-1.024L.33 9.85a1.265 1.265 0 0 1 0-1.704l.954-1.03c.251-.271.37-.65.319-1.023L1.41 4.676c-.089-.654.336-1.265.96-1.378l1.351-.248c.356-.066.664-.3.834-.633l.643-1.265c.297-.584.984-.817 1.553-.527l1.233.629a1.13 1.13 0 0 0 1.03 0z"
+                                      fill="currentColor"
+                                  ></path>
+                                  <path d="m5.599 8.777 2.168 2.119 3.767-4.279" stroke="#fff" stroke-width="1.159" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                          </div>
+                      </button>
+                  </div>
+                  <div id="swap-change" class="swap-tokens-form__token-pair__switch">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 275" width="320" height="275" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                        <g clip-path="url(#__lottie_element_16)"><g transform="matrix(6.659999847412109,0,0,6.659999847412109,160,137.5)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="2.716" d=" M-0.9169999957084656,6.150000095367432 C-0.9169999957084656,6.150000095367432 -5.23799991607666,10.472000122070312 -5.23799991607666,10.472000122070312 M-5.23799991607666,10.472000122070312 C-5.23799991607666,10.472000122070312 -9.5600004196167,6.150000095367432 -9.5600004196167,6.150000095367432 M-5.23799991607666,10.472000122070312 C-5.23799991607666,10.472000122070312 -5.23799991607666,-1.0520000457763672 -5.23799991607666,-1.0520000457763672"></path></g></g><g transform="matrix(6.659999847412109,0,0,6.659999847412109,160,137.5)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="2.716" d=" M0.9169999957084656,-5.9079999923706055 C0.9169999957084656,-5.9079999923706055 5.23799991607666,-10.229999542236328 5.23799991607666,-10.229999542236328 M5.23799991607666,-10.229999542236328 C5.23799991607666,-10.229999542236328 9.559000015258789,-5.9079999923706055 9.559000015258789,-5.9079999923706055 M5.23799991607666,-10.229999542236328 C5.23799991607666,-10.229999542236328 5.23799991607666,1.2940000295639038 5.23799991607666,1.2940000295639038"></path></g></g></g>
+                      </svg>
+                  </div>
+                  <div class="stack-layout d-flex flex-sm-row flex-column stack-layout--gap-100 stack-layout--direction-row stack-layout--align-items-center stack-layout--justify-content-space-between token-field" >
+                      <div class="stack-layout stack-layout--gap-0 stack-layout--direction-column stack-layout--align-items-start token-amount-field">
+                          <div class="stack-layout stack-layout--gap-0 stack-layout--direction-row stack-layout--align-items-baseline">
+                              <div class="stack-layout stack-layout--gap-50 stack-layout--direction-column input-field">
+                                  <input id="swap-output" class="input-field__input" placeholder="0.00" name="toTokenAmount" inputmode="decimal" autocomplete="off" value="" style="max-width: 16ch;" />
+                              </div>
+                          </div>
+                          <p class="token-amount-field__balance">Balance: <span id="swap-balance-output">0.000</span></p>
+                      </div>
+                      <button type="button" class="d-flex d-sm-block button button--secondary button--size-small button--icon-left token-field__token-btn button--with-icon" style="background-image: linear-gradient(160deg,#424750,#202326); border: none;">
+                          <div class="stack-layout stack-layout--gap-50 stack-layout--direction-row stack-layout--align-items-center token ellipsis">
+                            <div class="token-logo"><img id="swap-logo-output" src="images/logos/TWEP/TWEP.png" class="token-logo__image" alt="Token logo"  /></div>
+                              <span id="swap-symbol-output" class="token__symbol ellipsis">TWEP</span>
+                              <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18" class="icon token__verified">
+                                  <path
+                                      d="m9.015 1.254 1.233-.63c.568-.29 1.256-.057 1.553.528l.643 1.265c.17.334.478.567.835.633l1.351.247c.624.115 1.048.724.96 1.38l-.193 1.417a1.26 1.26 0 0 0 .32 1.024l.953 1.03c.44.474.44 1.229 0 1.704l-.954 1.03a1.26 1.26 0 0 0-.319 1.024l.193 1.418c.088.654-.336 1.264-.96 1.379l-1.351.247c-.357.066-.665.3-.835.633l-.643 1.265c-.297.584-.984.817-1.553.527l-1.232-.629a1.13 1.13 0 0 0-1.032 0l-1.232.63c-.568.29-1.256.057-1.553-.528l-.643-1.266a1.181 1.181 0 0 0-.835-.633l-1.351-.247c-.624-.115-1.048-.724-.96-1.38l.193-1.417a1.26 1.26 0 0 0-.32-1.024L.33 9.85a1.265 1.265 0 0 1 0-1.704l.954-1.03c.251-.271.37-.65.319-1.023L1.41 4.676c-.089-.654.336-1.265.96-1.378l1.351-.248c.356-.066.664-.3.834-.633l.643-1.265c.297-.584.984-.817 1.553-.527l1.233.629a1.13 1.13 0 0 0 1.03 0z"
+                                      fill="currentColor"
+                                  ></path>
+                                  <path d="m5.599 8.777 2.168 2.119 3.767-4.279" stroke="#fff" stroke-width="1.159" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                          </div>
+                      </button>
+                  </div>
+                </div>
+  
+                <div id="swap-run" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                  <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon custom-button" >
+                    <span id="swap-run-name" class="button__content">Buy</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="my-5 col-12">
+              <iframe
+                class="mt-5 col-12 mx-auto"
+                style="height: 90vh"
+                src="https://dexscreener.com/bsc/0x9f7d235b7d3f4403133A559b0968361687e4fC62?embed=1&theme=dark&info=0"
+              ></iframe>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/page.js"></script>
+  
+    <script>
+      async function runGlobal() {
+        await _runGlobal();
+
+        // let btn = document.getElementById("mybutton");
+        //   btn.addEventListener(
+        //     "click",
+        //     function () {
+        //       if (btn?.innerText === "Approve") {
+        //         btn.classList.add("spin");
+        //         btn.disabled = true;
+
+        //         window.setTimeout(function () {
+        //           btn.classList.remove("spin");
+        //           btn.disabled = false;
+        //           btn.innerText = "Buy";
+        //         }, 2000);
+        //       }
+        //     },
+        //     false
+        //   );
+      }
+      
+    </script>
+
+    <script>
+      async function switchSwap() {
+        await switchTarget(['buy', 'sell'], 'swap', [handleInputBuy, handleInputSell], [(await gV('bnbBalance')), (await gV('twepBalance'))], [BNBICONURL, TOKENICONURL], ["BNB", "TWEP"], [runBuy, runSell]);
+      }
+
+      async function runPersonal() {
+        await _runPersonal();
+        
+        let web3Allowance = await CONTS['twep'].allowance(CURADR, ADRS['router']);
+        if (BIGINT(0) < web3Allowance) {
+          select('#run-web3-approve-router').classList.add('d-none');
+        } else {
+          select('#run-web3-approve-router').onclick = async () => { await approve('twep', ADRS['router']); };
+        }
+        
+        STATES['swap'] = 'sell';
+        await switchSwap();
+        select('#swap-change').onclick = async () => { await switchSwap(); };
+
+        
+      }
+
+      (async () => {
+        // do global
+        await runGlobal();
+
+        ////////////////////////////////////////////////////////////////////////////
+
+        $('[data-bs-toggle="tooltip"]').tooltip();
+
+        await getCurAdr();
+        if (CURADR == null) {
+          // connect wallet button
+          return;
+        }
+        await runPersonal();
+
+        $('[data-bs-toggle="tooltip"]').tooltip();
+      })();
+
+      select("#sidebar-nav").children[3].classList.add("active-neumorphism");
+    </script>
+    <style>
+
+    </style>
+  </body>
+</html>

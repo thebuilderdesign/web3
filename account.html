@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" style=" background-image: radial-gradient(circle farthest-corner at 50% 50%,#424750,#202326);">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fa.css">
+
+  <title>The Web3 Project | Taking online further beyond</title>
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" name="description">
+  <meta content="The Web3 Project | Taking online further beyond" property="og:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="og:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="og:image">
+  <meta content="The Web3 Project | Taking online further beyond" property="twitter:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="twitter:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+   
+  <link href="images/logos/TWEP/TWEP.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="images/logos/TWEP/TWEP.png" rel="apple-touch-icon" />
+
+  <meta name="twitter:image" content="images/logos/TWEP/TWEP.png">
+  <meta name="twitter:description" content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Web3 Project | Taking online further beyond">
+
+  <meta property="og:image" content="images/logos/TWEP/TWEP.png">
+  <link rel="stylesheet" href="css/flooz.css">
+</head>
+<body id="titano-finance" class="background">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebarContainer" class="col-auto" style="z-index: 1000002;">
+      </div>
+
+      <div id="overlay" style="z-index: 1000001;"></div>
+      
+      <main id='main'>
+        <div id="web3-header">
+        </div>
+
+        <div id="container">
+          <div class="my-5 col-12">
+            <div id="totalSection" class="card bg-light text-center p-4">
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col my-3">
+                  <div class="text-secondary">
+                    Total Earned
+                    <a href="#"><i id="totalShare" class="bi bi-share" data-toggle="modal" data-target="#jpModal"></i></a>
+                  </div>
+                  <h1 id="totalEarnedInUsd" class="text-primary fw-bold my-2">$0.000</h1>
+                  <span id="totalEarned" class="text-secondary">0.000 $TWEP (+0.000%)</span>
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    Your Daily Earning<i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    excluding wWEB3<br/>
+                    "></i>
+                    <a href="#"><i id="dailyShare" class="bi bi-share" data-toggle="modal" data-target="#jpModal"></i></a>
+                  </div>
+                  <h4><span id="nextDailyReward" class="fw-bold">0.000</span><span class="fw-bold"> $TWEP</span></h4>
+                  <span>$</span><span id="nextDailyRewardInUsd" class="text-secondary">0.000</span>
+          
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-5 col-12">
+            <div id='card'>
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    Next 1 hour Reward
+                  </div>
+                  <h4><span id="nexthourReward" class="fw-bold">0.000</span><span class="fw-bold"> $TWEP</span></h4>
+                  <span>$</span><span id="nexthourRewardInUsd" class="text-secondary">0.000</span>
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    Next 1 month Reward
+                  </div>
+                  <h4><span id="nextMonthReward" class="fw-bold">0.000</span><span class="fw-bold"> $TWEP</span></h4>
+                  <span>$</span><span id="nextMonthRewardInUsd" class="text-secondary">0.000</span>
+                  
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="my-5 col-12">
+            <div id='card'>
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    Total Supply
+                  </div>
+                  <h4 id="totalSupply" class="fw-bold">0</h4>
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    Your Balance
+                  </div>
+                  <h4 id="twepBalance" class="fw-bold my-2">0.000</h4>
+                  <span id="balanceInUsd" class="text-secondary">$0.000</span>
+                  
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    Your Holding %
+                  </div>
+                  <h4 id="percentTotalSupply" class="fw-bold">$0</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-5 col-12">
+            <div id='card'>
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    $wWEB3 Balance <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    excluding locked
+                    "></i>
+                  </div>
+                  <h4 id="wweb3Balance" class="fw-bold">0.000</h4>
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    $pWEB3 Balance
+                  </div>
+                  <h4 id="pweb3Balance" class="fw-bold">0.000</h4>
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    $xWEB3 Balance
+                  </div>
+                  <h4 id="xweb3Balance" class="fw-bold">0.000</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="jpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog my-5" role="document" style="max-width: 1000px;">
+            <div class="modal-content" style="background-color: #313131;">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Share it</h5>
+              </div>
+              <div class="modal-body">
+                <h4 id="imgCopy" class="fw-bold">
+                </h4>
+                <h4 class="fw-bold">
+                  Spread this to everywhere!
+                  <a id="shareTw" href="#"><i class="bi bi-twitter"></i></a>
+                  <a id="shareFb" href="#"><i class="bi bi-facebook"></i></a>
+                </h4>
+                <div id="jpCaptured"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Maintenance</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button type="button" id="showMsg" data-toggle="modal" data-target="#msgModal" style="display:none;"></button>
+
+        <div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog my-5" role="document" style="max-width: 1000px;">
+            <div class="modal-content" style="background-color: #313131;">
+              <div class="modal-header">
+              </div>
+              <div class="modal-body">
+                <h4 id="msgResult" class="fw-bold">
+                </h4>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/page.js"></script>
+
+  <script>
+    async function runGlobal() {
+      await _runGlobal();
+    }
+
+    async function runPersonal() {
+      await _runPersonal();
+
+      await getTotalEarned();
+
+      displayText("#balanceInUsd", `$${COMMA(INT((await gV('twepBalance')) * (await gV('price')), 3))}`);
+
+      let dailyEarning = (await gV('twepBalance')) / (await gV('totalSupply')) * reAmCur;
+      
+      // let rebaseRate = 1.00000017;
+      let rebaseRate = 1.00000079;
+      displayText("#nextRebaseReward", `${COMMA(INT(dailyEarning / (20 * 60 * 24), 3))}`);
+      displayText("#nextRebaseRewardInUsd", `${COMMA(INT(dailyEarning/ (20 * 60 * 24) * (await gV('price')), 3))}`);
+
+      // let hourRate = 1.00020402;
+      let hourRate = 1.00094844;
+      displayText("#nexthourReward", `${COMMA(INT(dailyEarning / (24), 3))}`);
+      displayText("#nexthourRewardInUsd", `${COMMA(INT(dailyEarning / (24) * (await gV('price')), 3))}`);
+
+      displayText("#nextDailyReward", `${COMMA(INT(dailyEarning, 3))}`);
+      displayText("#nextDailyRewardInUsd", `${COMMA(INT(dailyEarning * (await gV('price')), 3))}`);
+
+
+      // let MonthRate = 1.1582149;
+      let MonthRate = 1.9789369;
+      displayText("#nextMonthReward", `${COMMA(INT(dailyEarning * 30, 3))}`);
+      displayText("#nextMonthRewardInUsd", `${COMMA(INT(dailyEarning * 30 * (await gV('price')), 3))}`);
+
+
+    }
+
+    (async () => {
+      // do global
+      await runGlobal();
+
+			$('[data-bs-toggle="tooltip"]').tooltip();
+
+
+      await getCurAdr();
+      if (CURADR == null) {
+        displayText("#totalEarnedInUsd", `Connect Wallet`);
+        // connect wallet button
+        return;
+      }
+      
+      await runPersonal();
+
+      $('[data-bs-toggle="tooltip"]').tooltip();
+    })();
+    select('#sidebar-nav').children[1].classList.add('active-neumorphism');
+  </script>
+</body>
+</html>

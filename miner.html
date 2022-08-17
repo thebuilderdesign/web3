@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" style=" background-image: radial-gradient(circle farthest-corner at 50% 50%,#424750,#202326);">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fa.css">
+
+  <title>The Web3 Project | Taking online further beyond</title>
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" name="description">
+  <meta content="The Web3 Project | Taking online further beyond" property="og:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="og:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="og:image">
+  <meta content="The Web3 Project | Taking online further beyond" property="twitter:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="twitter:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+   
+  <link href="images/logos/TWEP/TWEP.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="images/logos/TWEP/TWEP.png" rel="apple-touch-icon" />
+
+  <meta name="twitter:image" content="images/logos/TWEP/TWEP.png">
+  <meta name="twitter:description" content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Web3 Project | Taking online further beyond">
+
+  <meta property="og:image" content="images/logos/TWEP/TWEP.png">
+  <link rel="stylesheet" href="css/flooz.css">
+</head>
+
+<body id="titano-finance" class="background">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebarContainer" class="col-auto" style="z-index: 1000002;  ">
+
+      </div>
+
+      <div id="overlay" style="z-index: 1000001;"></div>
+
+      <main id='main'>
+        <div id="web3-header">
+        </div>
+
+        <div id="container">
+          <div class="my-5 col-12">
+            <div id='card'>
+              <div class="text-secondary mb-1">
+                Hire Miners to earn WUSD <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                You can do many things with WUSD <br/>
+                including swap to BUSD (coming soon)
+                "></i>
+                
+              </div>
+              <div class="text-secondary mb-1">
+                Miner Rules and FAQs<br/>
+                Hire/Rehire/Claim shares 3h cooltime<br/>
+                Due to algorithm, if someone refers you, or if you hire, this cooltime could be longer<br/>
+                reward rate cap depending on the situation and your invested time<br/>
+                <br/>
+
+                Recommended strategy for week<br/>
+                claim every 7 days<br/>
+                rehire after 6 days, claim after 1 day<br/>
+                rehire after 3 days, rehire after 3 days, claim after 1 day<br/>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-5 col-12">
+            <div id='card'>
+              <span class="fw-medium ms-1">
+                Miner
+                <a id="miner-link" target="_blank">
+                  <span id="miner"></span>
+                </a>
+                <button id='copy-miner' class="copy-btn"> <img style="width: 16px; height: 16px; margin-left: 10px; " src="./images/copy-solid.svg" alt=""></button>
+              </span>
+
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col">
+                  <div class="text-secondary mb-1">
+                    Total Value Locked <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    200k is invested in many ways to increase fund (coin, node)
+                    "></i>
+                  </div>
+                  <h4 id="liqMinerBnb__" class="fw-bold">$218,629.46</h4>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="">
+            <div class="card col-12  mx-auto d-flex p-3 p-sm-4 mt-5 h-100" style="background-color: transparent;">
+              
+              <div id="run-busd-approve-miner" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon button-border" >
+                  <span class="button__content">$BUSD Approve to buy</span>
+                </button>
+              </div>
+
+
+            	<img src="./images/Group_68.png" class="col-12 mx-auto mb-4 pb-2" id="minerImage" alt="" style="width: 20%;">
+              
+              <label for="days-slider" class="fw-medium">Hire miners with <span id="days">100</span> BUSD or BNB</label>
+              <input type="number" min="1" max="10000" step="1" value="100" id="days-sliders" oninput="changeRangeValue(this.value)" class="mb-2">
+              <input type="range" min="1" max="10000" step="1" value="100" id="days-slider" oninput="changeInputValue(this.value)" class="">
+              
+              <div class="d-flex flex-xl-row flex-column justify-content-between mt-2 pt-1">
+                <div class="d-flex flex-column mt-4 col-12">
+                	<p class="">You get x5 more reward by paying with BNB/BUSD</p>
+
+                  <div class="info d-flex flex-column gap-3 mt-5">
+                    <div class="d-flex justify-content-between"><div>Your BNB</div> <div id="bnbBalance"></div></div>
+                    <div class="d-flex justify-content-between"><div>Your BUSD</div> <div id="busdBalance"></div></div>
+                  </div>
+
+                  <div class="d-flex flex-column flex-sm-row gap-3 mt-3">
+                    <button id="hire-miner-bnb" type="submit" class="button button--primary button--size-default button--icon-left button--with-icon w-100 button-border">
+                      <span id="run-name" class="button__content">
+                        Hire with BNB <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                        Rehire process included<br/>
+                        Check info in the rehire button
+                        "></i>
+                      </span>
+                    </button>
+
+                    <button id="hire-miner-busd" type="submit" class="button button--primary button--size-default button--icon-left button--with-icon w-100 button-border">
+                      <span id="run-name" class="button__content">
+                        Hire with BUSD <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                        Rehire process included<br/>
+                        Check info in the rehire button
+                        "></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="info d-flex flex-column gap-3 mt-5">
+                    <div class="d-flex justify-content-between"><div>Total Miners</div> 
+                    <a href="https://bscscan.com/token/0x6f17d0dcc709ee57b9d8bb9846ad740032db8661#balances" target="_blank">
+                      <div id="totalMiners"></div>
+                    </a>
+                  </div>
+                    <div class="d-flex justify-content-between">
+                      <div>Your Miners  <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                        There is no direct price for miner<br/>
+                        It is determined when you do the hire<br/>
+                        It relatively determines your daily rate and reward
+                        "></i>
+                      </div> 
+                      <div id="_miners"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <div>Your Invests  <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                        Only hire with pweb3/busd/bnb is counted<br/>
+                        Also includes referral<br/>
+                        rehire with WUSD doesnt count!
+                        "></i>
+                      </div> 
+                      <div id="_amounts"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <div>Current daily rate  <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                        4-6% is usual value<br/>
+                        could be more depending on your early participation
+                        "></i>
+                      </div> 
+                      <div id="_rates"></div>
+                    </div>
+
+                    <div class="d-flex justify-content-between"><div>WUSD Rewards   <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                      4-6% of your invest is usual value<br/>
+                      usually get capped at 5% if do same like others<br/>
+                      could be more depending on your early participation
+                      "></i></div> <div id="calculateWusdRewards"></div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="buying">
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                      <button id="hireMore" class="button button--primary button--size-default button--icon-left button--with-icon w-100 button-border">
+                        <span id="run-name" class="button__content">
+                          ReHire <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                          All Stacked WUSD Reward will be used<br/>
+                          You can do rehire 24 hour after hire/rehire
+                          "></i>
+                        </span>
+                      </button>
+
+                      <button id="sellOre" class="button button--primary button--size-default button--icon-left button--with-icon w-100 button-border" >
+                      	<span id="run-name" class="button__content">
+                          Claim WUSD  <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                          All stacked WUSD Reward will be claimed
+                          "></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="info d-flex flex-column gap-3 mt-5">
+                    <div class="d-flex justify-content-between">
+                      <div>Referral Address</div> <div id="refAdr"></div></div>
+                    </div>
+                  <hr>
+                  <div class="more_stats d-flex flex-column gap-3">
+                    <div>Miner stats</div>
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        Max Daily production:  <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                        decreases as time goes by<br/>
+                        decreases as you claim WUSD<br/>
+                        increases as you rehire<br/>
+                        recommended strategy is rehire for 6 days<br/>
+                        and claim WUSD at 7th day<br/>
+                        roughly 4% to 6% is achieved in usual cases<br/>
+                        It may be up or down depending on various situation
+                        "></i>
+                      </div> <div>6.9%</div></div>
+                    <div class="d-flex justify-content-between"><div>Hiring Fee:</div> <div>3%</div></div>
+                  </div>
+                    <div class="refferal">
+                      <div class="d-flex">
+                      <input
+                      id="ref"
+                      class="input-field__input"
+                      placeholder="Referral address"
+                      name=""
+                      inputmode="decimal"
+                      autocomplete="off"
+                      value=""
+                      style="max-width: 100%; font-size: 13px;"
+                    />
+                    <button style="font-size: 16px; 	background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;" class="copy-btn-ref"> <img style="width: 16px; height: 16px; margin-left: 10px; " src="./images/copy-solid.svg" alt=""></button>
+                      </div>
+                      <div>
+
+                        <p class="mx-auto text-center mt-3">earn 10% by referral!   <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                          10% of the payment by anyone who uses your link<br/>
+                          will be stackred as your reward<br/>
+                          referral payment<br/>
+                          BNB / BUSD used to hire<br/>
+                          WUSD used to hire more<br/>
+                          "></i>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="showMsg" data-toggle="modal" data-target="#msgModal" style="display:none;"></button>
+
+          <div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog my-5" role="document" style="max-width: 1000px;">
+              <div class="modal-content" style="background-color: #313131;">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                  <h4 id="msgResult" class="fw-bold">
+                  </h4>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/page.js"></script>
+  <script>
+    async function runGlobal() {
+      await _runGlobal();
+      
+      $(document).on('input', 'input[type="range"]', function (e) {
+        changedValue('days', select('input[type="range"]'));
+
+        if(document.getElementById('days').innerHTML < 3333) {
+          document.getElementById('minerImage').src = '/images/Group_68.png'
+        } if(document.getElementById('days').innerHTML > 3333) {
+          document.getElementById('minerImage').src = '/images/Group_67.png'
+        } if(document.getElementById('days').innerHTML >= 6666){
+          document.getElementById('minerImage').src = '/images/Group_66.png'
+        }
+      });
+
+    }
+
+    function showValue1(newValue) {
+        document.getElementById("days").innerHTML= newValue;
+      }
+
+    function changeRangeValue(val){
+        document.getElementById("days-slider").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+        showValue1(val);
+    }
+
+    function changeInputValue(val){
+        document.getElementById("days-sliders").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+        showValue1(val);
+    }
+
+
+    let rehireTimeLeft;
+    async function runPersonal() {
+      await _runPersonal();
+
+
+      let web3Allowance = await CONTS['twep'].allowance(CURADR, ADRS['wweb3']);
+      if (BIGINT(0) < web3Allowance) {
+        select('#run-web3-approve').classList.add('d-none');
+      } else {
+        select('#run-web3-approve').onclick = async () => { await approve('twep', ADRS['wweb3']); };
+      }
+
+      let wweb3Allowance = await CONTS['wweb3'].allowance(CURADR, ADRS['wweb3']);
+      if (BIGINT(0) < wweb3Allowance) {
+        select('#run-wweb3-approve').classList.add('d-none');
+      } else {
+        select('#run-wweb3-approve').onclick = async () => { await approve('wweb3', ADRS['wweb3']); };
+      }
+
+      let pweb3Allowance = await CONTS['pweb3'].allowance(CURADR, ADRS['miner']);
+      if (BIGINT(0) < pweb3Allowance) {
+        select('#run-pweb3-approve-miner').classList.add('d-none');
+      } else {
+        select('#run-pweb3-approve-miner').onclick = async () => { await approve('pweb3', ADRS['miner']); };
+      }
+
+      let busdAllowance = await CONTS['busd'].allowance(CURADR, ADRS['miner']);
+      if (BIGINT(0) < busdAllowance) {
+        select('#run-busd-approve-miner').classList.add('d-none');
+      } else {
+        select('#run-busd-approve-miner').onclick = async () => { await approve('busd', ADRS['miner']); };
+      }
+
+      let _miners = await CONTS['miner']._miners(CURADR);
+      select('#_miners').innerHTML = `${COMMA(INT(_miners))}`;
+			
+      let _amounts = await CONTS['miner']._amounts(CURADR);
+      select('#_amounts').innerHTML = `$${COMMA(INT(_amounts / BNBDIV, 1))}`;
+
+      let _rates = await CONTS['miner'].getRateX10000(CURADR);
+      select('#_rates').innerHTML = `${COMMA(INT(_rates / 10000 * 100, 2))}%`;      
+
+      let _daimonds = await CONTS['miner']._daimonds(CURADR);
+      select('#_daimonds').innerHTML = `${COMMA(INT(_daimonds))}`;
+      
+      let calculateWusdRewards = await CONTS['miner'].calculateWusdRewards(CURADR);
+      calculateWusdRewards = calculateWusdRewards / BNBDIV;
+      select('#calculateWusdRewards').innerHTML = `${COMMA(INT(calculateWusdRewards, 3))}`;
+
+
+      let refUrl = location.href.split('?ref=')[0] + '?ref=' + CURADR;
+      select('#ref').value = location.href.split('?ref=')[0] + '?ref=' + SHORTADR(CURADR, true, 2);
+
+      const buttonpref = select('.copy-btn-ref');
+
+      const addToClipboardref = async (link) => {
+        await navigator.clipboard.writeText(link);
+      }
+
+      const copyLinkref = async (link) => {
+        const copiedref = await addToClipboardref(link);
+        buttonpref.innerText = 'Copied';
+        setTimeout(() => {
+          buttonpref.innerHTML = '<img style="width: 16px; height: 16px; margin-left: 10px; " src="./images/copy-solid.svg" alt="">'
+        }, 3000)
+      };
+
+      buttonpref.addEventListener('click', () => copyLinkref(refUrl))
+
+      let ref = getRef();
+      if (ref == '') {
+      } else {
+       select('#refAdr').innerHTML = ref;
+      }
+      
+      
+      let lastHire = (await gV('lastHire'));
+      rehireTimeLeft = lastHire + 60*24*24 - now;
+      setInterval(function () {
+        if (isNaN(rehireTimeLeft)) {
+          return;
+        }
+        
+        if (rehireTimeLeft <= 0) {
+          displayText(`#hireMore span span`, "ReHire");
+          return;
+        }
+          
+          let timeStr = getTimeStr(rehireTimeLeft, false, true, true, true);
+          displayText(`##hireMore span span`, timeStr);
+          rehireTimeLeft -= 1;
+      }, 1000);
+
+    }
+
+    async function checkStat(adr) {
+      let _amounts = await CONTS['miner']._amounts(adr);
+      _amounts = _amounts / BNBDIV;
+      let _returns = await CONTS['miner']._returns(adr);
+      _returns = _returns / BNBDIV;
+
+      let rRate = _returns / _amounts * 100;
+
+      let firstTime = 1652598751;
+      let passedWeeks = (NOW() / 1000 - firstTime) / (60*60*24*7);
+      return [_amounts, _returns, rRate, passedWeeks, rRate / passedWeeks];
+    }
+
+    (async () => {
+      // do global
+      await runGlobal();
+
+      ////////////////////////////////////////////////////////////////////////////
+
+
+
+      $('[data-bs-toggle="tooltip"]').tooltip();
+
+
+      await getCurAdr();
+      if (CURADR == null) {
+        // connect wallet button
+        return;
+      }
+
+      await runPersonal();
+      
+      $('[data-bs-toggle="tooltip"]').tooltip();
+
+    })();
+
+    select('#sidebar-nav').children[6].classList.add('active-neumorphism');
+  </script>
+</body>
+</html>

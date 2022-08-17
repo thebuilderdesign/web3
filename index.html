@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="
+    background-image: radial-gradient(
+      circle farthest-corner at 50% 50%,
+      #424750,
+      #202326
+    );
+  "
+>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fa.css">
+
+  <title>The Web3 Project | Taking online further beyond</title>
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" name="description">
+  <meta content="The Web3 Project | Taking online further beyond" property="og:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="og:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="og:image">
+  <meta content="The Web3 Project | Taking online further beyond" property="twitter:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="twitter:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+   
+  <link href="images/logos/TWEP/TWEP.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="images/logos/TWEP/TWEP.png" rel="apple-touch-icon" />
+
+  <meta name="twitter:image" content="images/logos/TWEP/TWEP.png">
+  <meta name="twitter:description" content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Web3 Project | Taking online further beyond">
+
+  <meta property="og:image" content="images/logos/TWEP/TWEP.png">
+  <link rel="stylesheet" href="css/flooz.css">
+</head>
+  <!--Fork of titano website. simple and easy to use-->
+  <body id="titano-finance" class="background">
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          id="sidebarContainer"
+          class="col-auto"
+          style="z-index: 1000002"
+        ></div>
+
+        <div id="overlay" style="z-index: 1000001"></div>
+
+        <main id="main">
+          <div id="web3-header"></div>
+
+          <div id="container">
+            <!-- <div class="my-5 col-12">
+            <div id='card'>
+              <div class="text-secondary mb-1">
+                <p>V1 Trade is officially disabled until v2 Launch Monday July 18th!</p>
+                <p>Enjoy 20% APY and 30% APB (Annual Price Boost) thanks to our unique proprietary system WARP™</p>
+                <p>Join our latest funding round at <href a="https://www.pinksale.finance/launchpad/0x46Ad383e5D5D4E275d4af1a6E55C14b552CC69fE?chain=BSC">pinksale</a></href></p>
+              </div>
+            </div>
+          </div> -->
+
+            <div class="my-5 col-12">
+              <div id="card">
+                <div class="text-secondary mb-1">
+                  Total Value Locked
+                  <i
+                    class="bi bi-patch-question-fill"
+                    data-bs-toggle="tooltip"
+                    data-bs-html="true"
+                    title="
+                Liquidity + Company Share + wWEB3 + Miner
+                "
+                  ></i>
+                </div>
+                <h4 id="tvl" class="fw-bold">$0</h4>
+              </div>
+            </div>
+
+            <div class="my-5 col-12">
+              <div id="card">
+                <div class="row row-cols-1 row-cols-sm-3">
+                  <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      $TWEP Price
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="
+                    Our Main Token<br/>
+                    Your $TWEP balance increases by holding
+                    "
+                      ></i>
+                    </div>
+                    <h4 id="price" class="fw-bold">$0</h4>
+                  </div>
+
+                  <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      $wWEB3 Price
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="
+                    Wrapped $TWEP<br/>
+                    Use for where rebase is not supported (CEX, ledger, etc)<br/>
+                    Rebase happens internally with special algorithm<br/>
+                    you will get full rebase reward of wrapped duration when you unwrap
+                    "
+                      ></i>
+                    </div>
+                    <h4 id="wPrice" class="fw-bold">$0</h4>
+                  </div>
+
+                  <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      $xWEB3 Price
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="
+                    Governance Token<br/>
+                    Used for Quantum invest<br/>
+                    Claim daily reward                    
+                    "
+                      ></i>
+                    </div>
+                    <h4 id="xPrice" class="fw-bold">$0</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-5 col-12">
+              <div id="card">
+                <span class="fw-medium ms-1">
+                  $TWEP
+                  <a id="twep-link" target="_blank">
+                    <span id="twep"></span>
+                  </a>
+                  <button id="copy-twep" class="copy-btn">
+                    <img
+                      style="width: 16px; height: 16px; margin-left: 10px"
+                      src="./images/copy-solid.svg"
+                      alt=""
+                    />
+                  </button>
+                </span>
+
+                <div class="row row-cols-1 row-cols-sm-3">
+                  <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      Market Cap
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        data-bs-placement="bottom"
+                        title="Based on our actual circulating supply. Other chart may display differently."
+                      ></i>
+                    </div>
+                    <h4 id="mcap" class="fw-bold">$0</h4>
+                  </div>
+
+                  <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      Liquidity
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        data-bs-placement="bottom"
+                        title="Based on our actual circulating supply. Other chart may display differently."
+                      ></i>
+                    </div>
+                    <h4 id="liquidity" class="fw-bold">$0</h4>
+                  </div>
+
+                  <!-- <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      Correlation
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="
+                    Liquidity / Market Cap<br/>
+                    Higher % makes healthy stable project
+                    "
+                      ></i>
+                    </div>
+                    <h4 id="corr" class="fw-bold">0</h4>
+                  </div> -->
+
+                  <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      Circulating Supply
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="
+                    Excludes burn / locked tokens
+                    "
+                      ></i>
+                    </div>
+                    <h4 id="circulatingSupply" class="fw-bold">0</h4>
+                  </div>
+
+                  <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      Burned Supply
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="
+                    We use renounced contract for the burn<br/>
+                    Check The Black Hole (TBH) in whitepaper
+                    "
+                      ></i>
+                    </div>
+                    <h4 id="burntAmount" class="fw-bold">0</h4>
+                  </div>
+
+                  <div class="col my-3">
+                    <div class="text-secondary mb-1">
+                      Circuit Breaker
+                      <i
+                        class="bi bi-patch-question-fill"
+                        data-bs-toggle="tooltip"
+                        data-bs-html="true"
+                        title="
+                    If total of 0.5% price drop happens in 10 min,<br/>
+                    sell tax 10% is applied for 5 min<br/>
+                    (0% in normal situation)
+                    "
+                      ></i>
+                    </div>
+                    <h4 id="cb" class="fw-bold"></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="my-5 col-12">
+            <div id='card'>
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    TBH Value <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    TBH: The Black Hole
+                    "></i>
+                  </div>
+                  <h4 id="theBlackHole" class="fw-bold">$0</h4>
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    WTF Value <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    WTF: $TWEP Trust Fund<br/>
+                    $200K for Node (<span class='text-success'>+10%</span> / month) <br/>
+                    "></i>
+                  </div>
+                  <h4 id="trustFund" class="fw-bold">$0</h4>
+                </div>
+
+                <div class="col my-3">
+                  <div class="text-secondary mb-1">
+                    TWT Value <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    TWT: The $TWEP Treasury                   
+                    "></i>
+                  </div>
+                  <h4 id="treasury" class="fw-bold">$0</h4>
+                </div>           
+                
+              </div>
+            </div>
+          </div> -->
+
+            <button
+              id="rebase"
+              class="btn rounded-1 show"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+              data-bs-offset="0,14"
+            >
+              <span class="fw-medium ms-1">MANUAL REBASE</span>
+            </button>
+
+            <button
+              id="experi"
+              class="btn rounded-1 show"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+              data-bs-offset="0,14"
+            >
+              <span id="experiStr" class="fw-medium ms-1"></span>
+            </button>
+
+            <button
+              id="sellbuy"
+              class="btn rounded-1 show"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+              data-bs-offset="0,14"
+            >
+              <span id="sellbuyStr" class="fw-medium ms-1"></span>
+            </button>
+
+            <div id="priceChart"></div>
+
+            <div class="px-sm-3 my-5">
+              <div id="card">
+                <div class="text-secondary mb-1"></div>
+                <h4 id="events" class="fw-bold"></h4>
+              </div>
+            </div>
+
+            <div id="bl"></div>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="jpModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog my-5"
+              role="document"
+              style="max-width: 1000px"
+            >
+              <div class="modal-content" style="background-color: #313131">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Share Jackpot
+                  </h5>
+                </div>
+                <div class="modal-body">
+                  <h4 id="imgCopy" class="fw-bold"></h4>
+                  <h4 class="fw-bold">
+                    Spread this to everywhere!
+                    <a id="shareTw" href="#"><i class="bi bi-twitter"></i></a>
+                    <a id="shareFb" href="#"><i class="bi bi-facebook"></i></a>
+                  </h4>
+                  <div id="jpCaptured"></div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Maintenance
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            id="showMsg"
+            data-toggle="modal"
+            data-target="#msgModal"
+            style="display: none"
+          ></button>
+
+          <div
+            class="modal fade"
+            id="msgModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog my-5"
+              role="document"
+              style="max-width: 1000px"
+            >
+              <div class="modal-content" style="background-color: #313131">
+                <div class="modal-header"></div>
+                <div class="modal-body">
+                  <h4 id="msgResult" class="fw-bold"></h4>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script src="js/base.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/page.js"></script>
+    <script>
+      async function makeChart() {
+        let web3Prices = [];
+        V.forEach(function (e) {
+          web3Prices.push([e["now"], e["price"]]);
+        });
+        let wweb3Prices = [];
+        V.forEach(function (e) {
+          wweb3Prices.push([e["now"], e["wPrice"]]);
+        });
+        let xweb3Prices = [];
+        V.forEach(function (e) {
+          xweb3Prices.push([e["now"], e["xPrice"]]);
+        });
+
+        new ApexCharts(select("#priceChart"), {
+          series: [
+            {
+              name: "wWEB3",
+              data: wweb3Prices,
+            },
+          ],
+          chart: {
+            height: 600,
+            type: "area",
+            toolbar: {
+              show: false,
+            },
+          },
+          markers: {
+            size: 4,
+          },
+          theme: {
+            mode: "dark",
+          },
+          colors: ["#4154f1", "#2eca6a", "#ff771d"],
+          fill: {
+            type: "gradient",
+            gradient: {
+              shadeIntensity: 1,
+              stops: [0, 90, 100],
+            },
+          },
+          dataLabels: {
+            enabled: false,
+          },
+          stroke: {
+            curve: "smooth",
+            width: 2,
+          },
+          xaxis: {
+            type: "datetime",
+          },
+          tooltip: {
+            x: {
+              format: "dd/MM/yy HH:mm",
+            },
+          },
+        }).render();
+      }
+
+      async function runGlobal() {
+        await _runGlobal();
+
+        if (document.readyState !== "loading") {
+          await makeChart();
+        }
+        document.addEventListener("DOMContentLoaded", async () => {
+          await makeChart();
+        });
+      }
+
+      async function runPersonal() {
+        await _runPersonal();
+
+        // check vip
+        if (
+          0.1 <
+          ((await gV("twepBalance")) / (await gV("totalSupply"))) * 100
+        ) {
+          // alert('vip')
+        }
+
+        // toggle experiment
+        if (CURADR == "0x495987fFDcbb7c04dF08c07c6fD7e771Dba74175") {
+          let isExperi = await CONTS["twep"]._isExperi();
+          select("#experiStr").innerHTML = `TOGGLE EXPERIMENT ${isExperi}`;
+          select("#experi").onclick = async () => {
+            await runToggleExperi();
+          };
+
+          select("#sellbuyStr").innerHTML = `SELLBUY`;
+          select("#sellbuy").onclick = async () => {
+            for (let idx = 0; idx < 5; idx++) {
+              await SEND_TX("twep", "sellbuy", [BIG("100")]);
+            }
+          };
+        }
+
+        let blacklisted = await CONTS["twep"]._blacklisted(CURADR);
+        if (blacklisted) {
+          select("#bl").innerHTML = "blacklisted, contact mod with address";
+        }
+      }
+
+      (async () => {
+        // do global
+        await runGlobal();
+
+        $('[data-bs-toggle="tooltip"]').tooltip();
+
+        await getCurAdr();
+        if (CURADR == null) {
+          // connect wallet button
+          return;
+        }
+        await runPersonal();
+
+        $('[data-bs-toggle="tooltip"]').tooltip();
+      })();
+
+      select("#sidebar-nav").children[0].classList.add("active-neumorphism");
+    </script>
+  </body>
+</html>

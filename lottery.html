@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" style=" background-image: radial-gradient(circle farthest-corner at 50% 50%,#424750,#202326);">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Web3 Project | Taking online further beyond</title>
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" name="description">
+  <meta content="The Web3 Project | Taking online further beyond" property="og:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="og:description">
+  <meta content="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png" property="og:image">
+  <meta content="The Web3 Project | Taking online further beyond" property="twitter:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="twitter:description">
+  <meta content="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <link href="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524321551928e3d234161_circled.png" rel="shortcut icon" type="image/x-icon">
+  <link href="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png" rel="apple-touch-icon">
+
+  <meta name="twitter:image" content="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png">
+  <meta name="twitter:description" content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Web3 Project | Taking online further beyond">
+
+  <meta property="og:image" content="https://uploads-ssl.webflow.com/61f079fe9c0e84c389f618a4/61f524449aab6ada7f12a9ce_circled.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fa.css">
+  <link rel="stylesheet" href="css/flooz.css">
+</head>
+
+<body id="titano-finance" style="margin-bottom: 100px; width: 100%; background-image: radial-gradient(circle farthest-corner at 50% 50%,#424750,#202326); font-weight: 400;">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebarContainer" class="col-auto" style="z-index: 1000002;"></div>
+      <div id="overlay" style="z-index: 1000001;"></div>
+
+      <main id='main'>
+        <div id="web3-header"></div>
+
+        <div id="container">
+          <div class="my-5 col-12">
+            <div id='card'>
+              <div id="run-lottery" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon" style="border: 3px solid #48acef;
+                border-radius: 20px;
+                background-image: linear-gradient(134deg,#48acef,#00436f);
+                box-shadow: inset 0 0 1px 0 #001e32, -2px -2px 10px 0 rgb(93 100 112 / 85%), 2px 2px 10px 0 #111314, inset -2px -2px 3px 0 #48acef, inset 2px 2px 3px 0 #00436f;">
+                  <span class="button__content">Run Lottery</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-5 col-12">
+            <div id='card'>
+              <div id="win-number">
+              </div>
+              <div id="user-numbers">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/page.js"></script>
+
+  <script>
+let winNumberColors = ["yellow", "green", "cyan", "blue", "purple", "pink"];
+
+width = document.documentElement.clientWidth;
+height = document.documentElement.clientHeight;
+
+function displayWindowSize(){
+  if(width != document.documentElement.clientWidth || height != document.documentElement.clientHeight) {
+    location.reload();
+    return;
+  }
+  width = document.documentElement.clientWidth;
+  height = document.documentElement.clientHeight;
+}
+  
+window.addEventListener("resize", displayWindowSize);
+
+async function displayResult(winNumber, userNumbers) {
+  winNumber = String(winNumber).split('').map(v => INT(v));
+  let win = winNumber.map((w, i) => {
+    return `<div style="position: absolute; top: ` + (width > 768 ? 50 : 20) + `px; left: ` + ((i + 1) * (width > 768 ? 100 : 50)) + `px">
+        <figure class="ball ` + winNumberColors[i] + `">
+          <span class="shadow" />
+        </figure>
+        <span class="number">` + w + `</span>
+      </section>`
+  });
+  displayText('#win-number', win.join(''));
+
+  let user = userNumbers.map((userNumber, index) => {
+    userNumber = String(userNumber).split('').map(v => INT(v));
+    let wrongNumbers = userNumber.map((number, i) => {
+      let matchCount = 0;
+
+      for (let i = 5; i >= 0; i--) {
+        if (userNumber[i] == winNumber[i]) {
+          matchCount++;
+        } else {
+          break;
+        }
+      }
+      return 6 - matchCount > i ?
+          `<div style="position: absolute; top: 0; left: ` + ((i + 1) * (width > 768 ? 100 : 50)) + `px">
+        <span class="user_number unmatched">` + 
+          number + (userNumber[i] == winNumber[i] ? 
+          `<span class="check-mark">&#10004;</span>
+        </span>
+      </div>` : 
+          `<span class="wrong-mark">&#10005;</span>
+        </span>
+      </div>`) : '';
+    });
+
+    let correctNumbers = userNumber.map((number, i) => {
+      let matchCount = 0;
+
+      for (let i = 5; i >= 0; i--) {
+        if (userNumber[i] == winNumber[i]) {
+          matchCount++;
+        } else {
+          break;
+        }
+      }
+      return 6 - matchCount <= i ? 
+        `<div style="position: absolute; top: 0; left: ` + ((i + 1) * (width > 768 ? 100 : 50)) + `px">
+          <span class="user_number matched">` + 
+            number + (userNumber[i] == winNumber[i] ? 
+              `<span class="check-mark">&#10004;</span>
+          </span>
+        </div>` : 
+              `<span class="wrong-mark">&#10005;</span>
+            </span>
+        </div>`) : '';
+    });
+
+    let correctCount = 0;
+    for (let i = 0; i < 6; i++) {
+      if (correctNumbers[i] !== '') {
+        correctCount++;
+      }
+    }
+    return `<div class="user-number-row">
+    <div class="index">` + index + `</div>` + 
+    (correctCount == 0 ?
+      `<div class="all-number-container">
+        <span class="wrong-number-container">` +
+          wrongNumbers.join('') +
+        `</span>
+      </div></div>` : 
+        `<div class="all-number-container">
+          <span class="wrong-number-container">` +
+            // <div class="wrong-number-border" style="width: ` + (7 - correctCount) * (width > 768 ? 100 : 27.5) + `px"></div>` + 
+            wrongNumbers.join('') + 
+          `</span>
+          <span class="correct-numbers-container">
+            <div class="correct-number-border" style="left: ` + (width > 768 ? (7 - correctCount) * 100 - 45 : (7 - correctCount) * 50 - 22.5) + `px; width: ` + correctCount * (width > 768 ? 100 : 50) + `px;"></div>` + 
+            correctNumbers.join('') + 
+          `</span>
+        </div>
+    </div>`);
+  });
+
+  displayText('#user-numbers', user.join(''));
+  
+}
+
+async function runLottery() {
+  let userNumbers = [123456, 432012];
+
+  let [res, data] = await SEND_TX('lottery', 'betSingle', [userNumbers]);
+  if (res == true) {
+    return;
+  }
+  let result = data;
+  let txResult = await result.wait();
+  let txLogs = txResult['logs'];
+  let mintEvent = INTFS['lottery'].getEventTopic("SingleBetDone(uint)");
+  let winNumber;
+  for (txLog of txLogs) {
+    let topics = txLog['topics'];
+    if (topics[0] == mintEvent) {
+      let decodedData = INTFS['lottery'].decodeEventLog("SingleBetDone(uint)", txLog['data'], [mintEvent]);
+      winNumber = decodedData[0];
+      break;
+    }
+  }
+  
+
+  // let elm = select('#lottery-result');
+  // elm.classList = "d-flex align-items-center justify-content-between";
+  // for (let idx of [0, 1, 2, 3, 4, 5]) {
+  //   let div = makeElem('div');
+  //   div.classList = "d-flex align-items-center justify-content-between position-relative";
+
+  //   let img = makeElem('img');
+  //   img.src = `images/lottery/lot${idx}.png`;
+  //   div.append(img);
+
+    
+  //   div.innerHTML += `
+  //   <div style="
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   position: absolute;
+  //   color: #000000;
+  //   font-size: 42px;
+  //   font-weight: 600;
+  //   text-shadow: white -0.75px -0.75px 0px, white 0.75px -0.75px 0px, white -0.75px 0.75px 0px, white 0.75px 0.75px 0px;
+  //   ">${INT(lotteryNumber / 10**(6 - idx)) % 10}</div>
+  //   `;
+  //   elm.append(div);
+  // }
+  
+  await displayResult(winNumber, userNumbers);
+  
+}
+
+
+async function runGlobal() {
+  await _runGlobal();
+  
+  select(`#run-lottery`).onclick = async () => { await runLottery(); };
+}
+
+async function runPersonal() {
+  await _runPersonal();
+}
+
+(async () => {
+  await runGlobal();
+
+  await getCurAdr();
+  if (CURADR) {
+    await runPersonal();
+  }
+  
+  await runLast();
+})();
+
+  </script>
+</body>
+</html>

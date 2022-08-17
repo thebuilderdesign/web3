@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" style=" background-image: radial-gradient(circle farthest-corner at 50% 50%,#424750,#202326);">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fa.css">
+
+  <title>The Web3 Project | Taking online further beyond</title>
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" name="description">
+  <meta content="The Web3 Project | Taking online further beyond" property="og:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="og:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="og:image">
+  <meta content="The Web3 Project | Taking online further beyond" property="twitter:title">
+  <meta content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!" property="twitter:description">
+  <meta content="images/logos/TWEP/TWEP.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+   
+  <link href="images/logos/TWEP/TWEP.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="images/logos/TWEP/TWEP.png" rel="apple-touch-icon" />
+
+  <meta name="twitter:image" content="images/logos/TWEP/TWEP.png">
+  <meta name="twitter:description" content="The Web3 Project is on a mission to push web3 mass adoption by building the ultimate social network DApp, Whistle, where all your data will be backed as an NFT on the blockchain and purely under your control!">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Web3 Project | Taking online further beyond">
+
+  <meta property="og:image" content="images/logos/TWEP/TWEP.png">
+  <link rel="stylesheet" href="css/flooz.css">
+</head>
+
+<body id="titano-finance" class="background">
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebarContainer" class="col-auto" style="z-index: 1000002;  ">
+
+      </div>
+
+      <div id="overlay" style="z-index: 1000001;"></div>
+
+      <main id='main'>
+        <div id="web3-header">
+        </div>
+
+        <div id="container">
+          <div class="my-5 col-12">
+            <div id='card'>
+              <div class="row row-cols-1 row-cols-sm-3">
+                <div class="col">
+                  <div class="text-secondary mb-1">
+                    $TWEP balance
+                  </div>
+                  <h4 id="twepBalance" class="fw-bold">0.000</h4>
+                </div>
+
+                <div class="col">
+                  <div class="text-secondary mb-1">
+                    $wWEB3 balance
+                  </div>
+                  <h4 id="wweb3Balance" class="fw-bold">0.000</h4>
+                </div>
+
+                <div class="col">
+                  <div class="text-secondary mb-1">
+                    $pWEB3 balance
+                  </div>
+                  <h4 id="pweb3Balance" class="fw-bold">0.000</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="my-5 col-12">
+            <div id='card'>
+              <span class="fw-medium ms-1">
+                $pWEB3
+                <a id="pweb3-link" target="_blank">
+                  <span id="pweb3"></span>
+                </a>
+                <button  class="copy-btn-pweb copy-btn"> <img style="width: 16px; height: 16px; margin-left: 10px; " src="./images/copy-solid.svg" alt=""></button>
+              </span>
+              <p class="h5">1749 pWEB3 = roughly 1$</p>
+            </div>
+          </div>
+
+          <div class="row my-5 col-12">
+            <div class="my-3 col-12 col-lg-4">
+              <div id='card'>
+                <div class=" d-flex ">
+                  <div class="mx-auto">
+                    <h4>The Web3 Project</h4> <p>army NFT</p>
+                  </div>
+                </div>
+                <div id="run-pweb3-approve-nft" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                  <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon button-border">
+                    <span class="button__content">$pWEB3 Approve to Buy</span>
+                  </button>
+                </div>
+
+                <div id="video" style="display: none;">
+                  <video id="vid" class="col-12" style="margin-top: -180px;" >
+                    <source src="./images/box.webm" type="video/mp4">
+                  Your browser does not support the video tag. <!-- Text to be shown incase browser doesnt support html5 -->
+                  </video>
+                </div>
+                <div class="col-3" style="margin-left: 50px;">
+                  <img id="showNFT" src="" alt="">
+                </div>
+                <img src="./images/armybox.png" id="unBox" class="col-10 mx-auto" alt="">
+
+
+
+                <div>
+                  <p class="h5" style="margin-bottom: 120px;">Web3 army NFT</p>
+                </div>
+                  <div class="mt-3">
+                    <p class="">Buy NFT with 5,307,000 pWEB3</p>
+                    <p>Your NFT ID: <span id="nftId"></span><span id="nftLink"></span></p>
+                    <button id="buy-box" type="submit" class="button button--primary button--size-default button--icon-left button--with-icon mt-4 w-100 button-border">
+                      <span id="run-name" class="button__content">Buy</span>
+                    </button>
+                  </div>
+              </div>
+            </div>
+
+
+            <div class="my-3 col-12 col-lg-4">
+              <div id='card'>
+                <h5 class="fw-bold mb-0">Hire Miner</h5>
+
+                <div id="run-pweb3-approve-miner" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                  <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon button-border">
+                    <span class="button__content">$pWEB3 Approve to Buy</span>
+                  </button>
+                </div>
+
+                <div style="margin-left: 70px;">
+                  <img src="./images/Group_68.png" id="minerImage" class="col-8 mx-auto" alt="">
+                </div>
+
+                <div class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form__token-pair" style="margin: 10px 0; margin-top: 65px; box-shadow: inset 2px 2px 9px 0 rgb(17 19 20 / 90%), inset -2px -2px 9px 0 rgb(93 100 112 / 90%);  background-image: linear-gradient(160deg,#424750,#202326);">
+                    <div class="stack-layout d-flex flex-sm-row flex-column stack-layout--gap-100 stack-layout--direction-row stack-layout--align-items-center stack-layout--justify-content-space-between token-field">
+                        <div class="stack-layout stack-layout--gap-0 stack-layout--direction-column stack-layout--align-items-start token-amount-field">
+                            <div class="stack-layout stack-layout--gap-0 stack-layout--direction-row stack-layout--align-items-baseline">
+                                <div class="stack-layout stack-layout--gap-50 stack-layout--direction-column input-field">
+                                    <input id="miner-input" class="input-field__input" placeholder="0.00" name="fromTokenAmount" inputmode="decimal" autocomplete="off" value="" style="max-width: 16ch;" />
+                                </div>
+                            </div>
+                            <p class="token-amount-field__balance">Balance: <span id="pweb3Balance">0.000</span></p>
+                        </div>
+                        <button type="button" onclick="maxPweb3Input('#miner-input')" class="d-flex d-sm-block button button--secondary button--size-small button--icon-left token-field__token-btn button--with-icon" style="background-image: linear-gradient(160deg,#424750,#202326); border: none;">
+                            <div class="stack-layout stack-layout--gap-50 stack-layout--direction-row stack-layout--align-items-center token ellipsis">
+                              <div>Max</div>
+                              <div class="token-logo"><img src="images/logos/TWEP/pointshop.png" class="token-logo__image" alt="Token logo"  /></div>
+                              <span id="wrap-symbol-input" class="token__symbol ellipsis">pWEB3</span>
+                                <!-- <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18" class="icon token__verified">
+                                    <path
+                                        d="m9.015 1.254 1.233-.63c.568-.29 1.256-.057 1.553.528l.643 1.265c.17.334.478.567.835.633l1.351.247c.624.115 1.048.724.96 1.38l-.193 1.417a1.26 1.26 0 0 0 .32 1.024l.953 1.03c.44.474.44 1.229 0 1.704l-.954 1.03a1.26 1.26 0 0 0-.319 1.024l.193 1.418c.088.654-.336 1.264-.96 1.379l-1.351.247c-.357.066-.665.3-.835.633l-.643 1.265c-.297.584-.984.817-1.553.527l-1.232-.629a1.13 1.13 0 0 0-1.032 0l-1.232.63c-.568.29-1.256.057-1.553-.528l-.643-1.266a1.181 1.181 0 0 0-.835-.633l-1.351-.247c-.624-.115-1.048-.724-.96-1.38l.193-1.417a1.26 1.26 0 0 0-.32-1.024L.33 9.85a1.265 1.265 0 0 1 0-1.704l.954-1.03c.251-.271.37-.65.319-1.023L1.41 4.676c-.089-.654.336-1.265.96-1.378l1.351-.248c.356-.066.664-.3.834-.633l.643-1.265c.297-.584.984-.817 1.553-.527l1.233.629a1.13 1.13 0 0 0 1.03 0z"
+                                        fill="currentColor"
+                                    ></path>
+                                    <path d="m5.599 8.777 2.168 2.119 3.767-4.279" stroke="#fff" stroke-width="1.159" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> -->
+                            </div>
+                        </button>
+                    </div>
+                    <div class="stack-layout d-flex flex-sm-row flex-column stack-layout--gap-100 stack-layout--direction-row stack-layout--align-items-center stack-layout--justify-content-space-between token-field" >
+                        <div class="stack-layout stack-layout--gap-0 stack-layout--direction-column stack-layout--align-items-start token-amount-field">
+                            <p class="token-amount-field__balance">Balance: <span id="minerBalance">0.000</span></p>
+                        </div>
+                        <button type="button" class="d-flex d-sm-block button button--secondary button--size-small button--icon-left token-field__token-btn button--with-icon" style="background-image: linear-gradient(160deg,#424750,#202326); border: none;">
+                            <div class="stack-layout stack-layout--gap-50 stack-layout--direction-row stack-layout--align-items-center token ellipsis">
+                                <span id="wrap-symbol-output" class="token__symbol ellipsis">Miners</span>
+                                <!-- <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18" class="icon token__verified">
+                                    <path
+                                        d="m9.015 1.254 1.233-.63c.568-.29 1.256-.057 1.553.528l.643 1.265c.17.334.478.567.835.633l1.351.247c.624.115 1.048.724.96 1.38l-.193 1.417a1.26 1.26 0 0 0 .32 1.024l.953 1.03c.44.474.44 1.229 0 1.704l-.954 1.03a1.26 1.26 0 0 0-.319 1.024l.193 1.418c.088.654-.336 1.264-.96 1.379l-1.351.247c-.357.066-.665.3-.835.633l-.643 1.265c-.297.584-.984.817-1.553.527l-1.232-.629a1.13 1.13 0 0 0-1.032 0l-1.232.63c-.568.29-1.256.057-1.553-.528l-.643-1.266a1.181 1.181 0 0 0-.835-.633l-1.351-.247c-.624-.115-1.048-.724-.96-1.38l.193-1.417a1.26 1.26 0 0 0-.32-1.024L.33 9.85a1.265 1.265 0 0 1 0-1.704l.954-1.03c.251-.271.37-.65.319-1.023L1.41 4.676c-.089-.654.336-1.265.96-1.378l1.351-.248c.356-.066.664-.3.834-.633l.643-1.265c.297-.584.984-.817 1.553-.527l1.233.629a1.13 1.13 0 0 0 1.03 0z"
+                                        fill="currentColor"
+                                    ></path>
+                                    <path d="m5.599 8.777 2.168 2.119 3.767-4.279" stroke="#fff" stroke-width="1.159" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> -->
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="buy-miner" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                  <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon button-border">
+                    <span id="" class="button__content">Buy<i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                    Stacked WUSD rewards will also be used
+                    "></i></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-3 col-12 col-lg-4">
+              <div id='card'>
+                <div class=" d-flex ">
+                  <h5 class="fw-bold mb-0 mx-auto h4"><div class="center-text ">xWeb3</div> Governance</h5>
+                  <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                  "></i>
+                </div>
+
+                <div id="run-pweb3-approve-xweb3" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                  <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon button-border">
+                    <span class="button__content">$pWEB3 Approve to Buy</span>
+                  </button>
+                </div>
+                <img src="./images/Crown.png" class="col-8 mx-auto" alt="">
+
+                <div>
+                  <p class="h5"> Quantum investing</p>
+                  <p class="h5"> Share profit</p>
+                  <p class="">1 xWEB3 = <span id="xPrice">$</p><i class="bi bi-patch-question-fill" data-bs-toggle="tooltip" data-bs-html="true" title="
+                  xWEB3 price increases over time always"></i>
+                </div>
+
+
+                <div class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form__token-pair" style="margin: 10px 0; margin-top: 65px; box-shadow: inset 2px 2px 9px 0 rgb(17 19 20 / 90%), inset -2px -2px 9px 0 rgb(93 100 112 / 90%);  background-image: linear-gradient(160deg,#424750,#202326);">
+                    <div class="stack-layout d-flex flex-sm-row flex-column stack-layout--gap-100 stack-layout--direction-row stack-layout--align-items-center stack-layout--justify-content-space-between token-field">
+                        <div class="stack-layout stack-layout--gap-0 stack-layout--direction-column stack-layout--align-items-start token-amount-field">
+                            <div class="stack-layout stack-layout--gap-0 stack-layout--direction-row stack-layout--align-items-baseline">
+                                <div class="stack-layout stack-layout--gap-50 stack-layout--direction-column input-field">
+                                    <input id="xweb3-input" class="input-field__input" placeholder="0.00" name="fromTokenAmount" inputmode="decimal" autocomplete="off" value="" style="max-width: 16ch;" />
+                                </div>
+                            </div>
+                            <p class="token-amount-field__balance">Balance: <span id="pweb3Balance">0.000</span></p>
+                        </div>
+                        <button type="button" onclick="maxPweb3Input('#xweb3-input')" class="d-flex d-sm-block button button--secondary button--size-small button--icon-left token-field__token-btn button--with-icon" style="background-image: linear-gradient(160deg,#424750,#202326); border: none;">
+                            <div class="stack-layout stack-layout--gap-50 stack-layout--direction-row stack-layout--align-items-center token ellipsis">
+                              <div>Max</div>
+                              <div class="token-logo"><img src="images/logos/TWEP/pointshop.png" class="token-logo__image" alt="Token logo"  /></div>
+                              <span id="" class="token__symbol ellipsis">pWEB3</span>
+                                <!-- <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18" class="icon token__verified">
+                                    <path
+                                        d="m9.015 1.254 1.233-.63c.568-.29 1.256-.057 1.553.528l.643 1.265c.17.334.478.567.835.633l1.351.247c.624.115 1.048.724.96 1.38l-.193 1.417a1.26 1.26 0 0 0 .32 1.024l.953 1.03c.44.474.44 1.229 0 1.704l-.954 1.03a1.26 1.26 0 0 0-.319 1.024l.193 1.418c.088.654-.336 1.264-.96 1.379l-1.351.247c-.357.066-.665.3-.835.633l-.643 1.265c-.297.584-.984.817-1.553.527l-1.232-.629a1.13 1.13 0 0 0-1.032 0l-1.232.63c-.568.29-1.256.057-1.553-.528l-.643-1.266a1.181 1.181 0 0 0-.835-.633l-1.351-.247c-.624-.115-1.048-.724-.96-1.38l.193-1.417a1.26 1.26 0 0 0-.32-1.024L.33 9.85a1.265 1.265 0 0 1 0-1.704l.954-1.03c.251-.271.37-.65.319-1.023L1.41 4.676c-.089-.654.336-1.265.96-1.378l1.351-.248c.356-.066.664-.3.834-.633l.643-1.265c.297-.584.984-.817 1.553-.527l1.233.629a1.13 1.13 0 0 0 1.03 0z"
+                                        fill="currentColor"
+                                    ></path>
+                                    <path d="m5.599 8.777 2.168 2.119 3.767-4.279" stroke="#fff" stroke-width="1.159" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> -->
+                            </div>
+                        </button>
+                    </div>
+                    <div class="stack-layout d-flex flex-sm-row flex-column stack-layout--gap-100 stack-layout--direction-row stack-layout--align-items-center stack-layout--justify-content-space-between token-field" >
+                        <div class="stack-layout stack-layout--gap-0 stack-layout--direction-column stack-layout--align-items-start token-amount-field">
+                          <div class="stack-layout stack-layout--gap-0 stack-layout--direction-row stack-layout--align-items-baseline">
+                            <div class="stack-layout stack-layout--gap-50 stack-layout--direction-column input-field">
+                              <input id="xweb3-output" class="input-field__input" placeholder="0.00" name="toTokenAmount" inputmode="decimal" autocomplete="off" value="" style="max-width: 16ch;" />
+                            </div>
+                          </div>
+                          <p class="token-amount-field__balance">Balance: <span id="xweb3Balance">0.000</span></p>
+                        </div>
+                        <button type="button" class="d-flex d-sm-block button button--secondary button--size-small button--icon-left token-field__token-btn button--with-icon" style="background-image: linear-gradient(160deg,#424750,#202326); border: none;">
+                            <div class="stack-layout stack-layout--gap-50 stack-layout--direction-row stack-layout--align-items-center token ellipsis">
+                                <span id="" class="token__symbol ellipsis">xWEB3</span>
+                                <!-- <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 18" class="icon token__verified">
+                                    <path
+                                        d="m9.015 1.254 1.233-.63c.568-.29 1.256-.057 1.553.528l.643 1.265c.17.334.478.567.835.633l1.351.247c.624.115 1.048.724.96 1.38l-.193 1.417a1.26 1.26 0 0 0 .32 1.024l.953 1.03c.44.474.44 1.229 0 1.704l-.954 1.03a1.26 1.26 0 0 0-.319 1.024l.193 1.418c.088.654-.336 1.264-.96 1.379l-1.351.247c-.357.066-.665.3-.835.633l-.643 1.265c-.297.584-.984.817-1.553.527l-1.232-.629a1.13 1.13 0 0 0-1.032 0l-1.232.63c-.568.29-1.256.057-1.553-.528l-.643-1.266a1.181 1.181 0 0 0-.835-.633l-1.351-.247c-.624-.115-1.048-.724-.96-1.38l.193-1.417a1.26 1.26 0 0 0-.32-1.024L.33 9.85a1.265 1.265 0 0 1 0-1.704l.954-1.03c.251-.271.37-.65.319-1.023L1.41 4.676c-.089-.654.336-1.265.96-1.378l1.351-.248c.356-.066.664-.3.834-.633l.643-1.265c.297-.584.984-.817 1.553-.527l1.233.629a1.13 1.13 0 0 0 1.03 0z"
+                                        fill="currentColor"
+                                    ></path>
+                                    <path d="m5.599 8.777 2.168 2.119 3.767-4.279" stroke="#fff" stroke-width="1.159" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> -->
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="approved-xweb3"></div>
+                  <div id="buy-xweb3" class="stack-layout stack-layout--gap-50 stack-layout--direction-column swap-tokens-form-submit my-1">
+                    <button type="submit" class="button button--primary button--size-default button--icon-left button--with-icon button-border">
+                      <span id="" class="button__content">Buy</span>
+                    </button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" id="showMsg" data-toggle="modal" data-target="#msgModal" style="display:none;"></button>
+
+        <div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog my-5" role="document" style="max-width: 1000px;">
+            <div class="modal-content" style="background-color: #313131;">
+              <div class="modal-header">
+              </div>
+              <div class="modal-body">
+                <h4 id="msgResult" class="fw-bold">
+                </h4>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/page.js"></script>
+  <script>
+    document.getElementById("showSidebar").addEventListener("click", function () {
+      document.getElementById("sidebarContainer").classList.add("show");
+      document.getElementById("overlay").style.display = "block"
+    })
+
+    document.getElementById("overlay").addEventListener("click", function () {
+      document.getElementById("sidebarContainer").classList.remove("show");
+      document.getElementById("overlay").style.display = "none"
+    })
+  </script>
+
+  <script >
+    async function runGlobal() {
+      await _runGlobal();
+    }
+
+
+
+
+    async function boxOpening() {
+      let [res, data] = await SEND_TX('nft', 'getArmyBox', []);
+      if (res == true) {
+        return;
+      }
+
+      let result = data;
+      let txResult = await result.wait();
+      let txLogs = txResult['logs'];
+      let mintEvent = INTFS['nft'].getEventTopic("MintedNFT(uint, address, uint256)");
+      let armyImgUrl;
+      for (txLog of txLogs) {
+        let topics = txLog['topics'];
+        if (topics[0] == mintEvent) {
+          let decodedData = INTFS['nft'].decodeEventLog("MintedNFT(uint, address, uint256)", txLog['data'], [mintEvent]);
+          let tokenId = decodedData[0];
+          let itemId = decodedData[2];
+          displayText('#nftId', tokenId);
+          displayText('#nftLink', HREF(BSC('address', CURADR + '#tokentxnsErc721'), Link));
+          let armyJsonUrl = await CONTS['nft'].tokenURI(tokenId);
+          let armyJsonData = await getUrlData(armyJsonUrl);
+          armyImgUrl = armyJsonData['image']
+        }
+      }
+      document.getElementById("unBox").style.display = 'none';
+      document.getElementById("video").style.display = 'block';
+      vid = document.getElementById("vid");
+      vid.play();
+      setInterval(() => {
+      // document.getElementById("unBox").style.display = 'block';
+      // var createNft = document.createElement('img');
+      // createNft.src = './images/circledlogo.png';
+      // console.log(createNft);
+      document.getElementById("showNFT").src = armyImgUrl;
+
+      document.getElementById("video").style.display = 'none';
+      }, 2000);
+    }
+
+    async function runPersonal() {
+      await _runPersonal();
+
+      let web3Allowance = await CONTS['twep'].allowance(CURADR, ADRS['wweb3']);
+      if (BIGINT(0) < web3Allowance) {
+        select('#run-web3-approve').classList.add('d-none');
+      } else {
+        select('#run-web3-approve').onclick = async () => { await approve('twep', ADRS['wweb3']); };
+      }
+
+      let wweb3Allowance = await CONTS['wweb3'].allowance(CURADR, ADRS['wweb3']);
+      if (BIGINT(0) < wweb3Allowance) {
+        select('#run-wweb3-approve').classList.add('d-none');
+      } else {
+        select('#run-wweb3-approve').onclick = async () => { await approve('wweb3', ADRS['wweb3']); };
+      }
+
+      let pweb3Allowance = await CONTS['pweb3'].allowance(CURADR, ADRS['nft']);
+      if (BIGINT(0) < pweb3Allowance) {
+        select('#run-pweb3-approve-nft').classList.add('d-none');
+      } else {
+        select('#run-pweb3-approve-nft').onclick = async () => { await approve('pweb3', ADRS['nft']); };
+      }
+
+      let pppweb3Allowance = await CONTS['pweb3'].allowance(CURADR, ADRS['miner']);
+      if (BIGINT(0) < pppweb3Allowance) {
+        select('#run-pweb3-approve-miner').classList.add('d-none');
+      } else {
+        select('#run-pweb3-approve-miner').onclick = async () => { await approve('pweb3', ADRS['miner']); };
+      }
+
+      let ppweb3Allowance = await CONTS['pweb3'].allowance(CURADR, ADRS['xweb3']);
+      if (BIGINT(0) < ppweb3Allowance) {
+        select('#run-pweb3-approve-xweb3').classList.add('d-none');
+      } else {
+        select('#run-pweb3-approve-xweb3').onclick = async () => { await approve('pweb3', ADRS['xweb3']); };
+      }
+
+      let busdAllowance = await CONTS['busd'].allowance(CURADR, ADRS['xweb3']);
+      if (BIGINT(0) < busdAllowance) {
+        select('#run-busd-approve-xweb3').classList.add('d-none');
+      } else {
+        select('#run-busd-approve-xweb3').onclick = async () => { await approve('busd', ADRS['xweb3']); };
+      }
+
+    }
+
+    function checkValue(val) {
+			val = parseFloat(val);
+        if (isNaN(val)) {
+          val = 0;
+        }
+      return val;
+    }
+    function setMinerValue(e) {
+      let val = e.target.value;
+      val = checkValue(val);
+        select('#pweb3-slider').value = `${COMMA(INT(val))}`;
+        select('#pweb3-sliders').value = `${COMMA(INT(val))}`;
+        displayText('#pweb3Amount', `${COMMA(INT(val))}`);
+
+        if(val < 29483333) {
+          document.getElementById('minerImage').src = '/images/Group_68.png'
+        } if(val > 29483333) {
+          document.getElementById('minerImage').src = '/images/Group_67.png'
+        } if(val >= 58966666){
+          document.getElementById('minerImage').src = '/images/Group_66.png'
+        }
+    }
+
+		async function setXweb3Value(val) {
+      val = checkValue(val);
+
+      select('#xweb3-output').value = INT(val / 1769 / (await gV('xPrice')), 5);
+    }
+
+    (async () => {
+      // do global
+      await runGlobal();
+
+      $(document).on('input', '#pweb3-slider', function (e) {
+    		setMinerValue(e);
+      });
+
+      $(document).on('input', '#pweb3-sliders', function (e) {
+        setMinerValue(e);
+      });
+
+      select(`#xweb3-input`).addEventListener('input', async function (e) {
+        await setXweb3Value(e.target.value);
+      });
+      
+      ////////////////////////////////////////////////////////////////////////////
+
+      select('#curPrice').value = `${COMMA(INT((await gV('price')), 3))}`;
+      select('#futPrice').value = `${COMMA(INT((await gV('price')), 3))}`;
+
+
+      select('#setMaxToAmount').onclick = async () => {
+        select('#amount').value = (await gV('twepBalance'));
+      };
+      select('#setCurToApy').onclick = async () => {
+        select('#input-apy').value = 404092.65;
+      };
+      select('#setCurToCurPrice').onclick = async () => {
+        select('#curPrice').value = INT((await gV('price')), 3);
+      };
+      select('#setCurToFutPrice').onclick = async () => {
+        select('#futPrice').value = INT((await gV('price')), 3);
+      };
+      $('[data-bs-toggle="tooltip"]').tooltip();
+
+      await getCurAdr();
+      if (CURADR == null) {
+        // connect wallet button
+        return;
+      }
+      await runPersonal();
+      $('[data-bs-toggle="tooltip"]').tooltip();
+
+    })();
+
+    select('#sidebar-nav').children[5].classList.add('active-neumorphism');
+  </script>
+</body>
+</html>

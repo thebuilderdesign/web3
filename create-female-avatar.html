@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Create Avatar</title>
+</head>
+<body class="bg-primary">
+    <header>
+        <nav class="navbar navbar-expand navbar-light bg-white m-0 p-0 fixed-top" style="z-index: 10000;">
+            <div class="container-fluid custom-container-p">
+                <a id="create-avatar-page-logo" class="p-0" href="index.html">
+                    <img src="images/logo.png" alt="logo" class="img-fluid" />
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ms-auto">
+                        <a href="collection.html" class="btn btn-outline-light rounded-pill ps-1 d-flex align-items-center">
+                            <span class="bg-light ms-1 text-white rounded-circle p-1 d-flex align-items-center justify-content-center me-md-2" style="height: 32px; width: 32px;">
+                                <i class="bi bi-basket2-fill fs-5"></i>
+                            </span>
+
+                            <span class="fw-bold d-none d-md-block">My Collection</span>
+                        </a>
+                        
+                        <a href="box.html" class="btn btn-light text-white rounded-pill ps-1 d-flex align-items-center ms-4">
+                            <span class="bg-white ms-1 rounded-circle p-1 d-flex align-items-center justify-content-center me-md-2" style="height: 32px; width: 32px;">
+                                <img src="images/create-avatar-icon.png" alt="box" class="img-fluid" />
+                            </span>
+
+                            <span class="fw-bold d-none d-md-block">Open Mystery Box</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="create-avatar-page">
+        <div class="d-flex">
+            <div id="sidebar-container" class="h-100 bg-light d-none d-md-block">
+                <div id="sidebar" class="nav flex-column flex-nowrap position-fixed top-0 left-0 bg-light h-100" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    
+                </div>
+            </div>
+
+            <div id="option-panel-container" class="col d-none d-md-block">
+                <div id="option-panel" class="">
+                    <div class="tab-content ms-4" id="v-pills-tabContent-female" style="max-width: 320px;">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-xxl-5 text-center ps-lg-5 px-xl-5 ms-auto">
+                <h3>Avatar NFT</h3>
+                <p class="mb-0 mb-md-3">
+                    You can create NFT Avatar or You can combine NFT iteams <br class="d-none d-md-block">to make NFT avatr like this!
+                </p>
+
+                <div class="btn-group rounded-pill align-items-center border border-white p-1 mx-auto my-3 my-md-4" role="group">
+                    <a href="create-female-avatar.html" class="btn btn-light text-white rounded-pill px-4 fw-bold d-flex align-items-center">
+                        <img src="images/female-icon.png" alt="" class="me-2" />
+                        Female
+                    </a>
+
+                    <a href="create-male-avatar.html" class="btn rounded-pill px-4 ms-2 d-flex align-items-center fw-bold">
+                        <img src="images/male-icon.png" alt="" class="me-2" />
+                        Male
+                    </a>
+                </div>
+
+                <div id="output-img-container" class="position-relative">
+                    <!-- <img id="combined-output-img" src="" alt="" class="img-fluid" /> -->
+                    
+                    <canvas id="combined-output-img"></canvas>
+                                        
+                    <div class="position-absolute top-0 end-0 p-3" style="z-index: 1008">
+                        <button id="btnDownload" type="button" class="btn p-0" onclick="download()">
+                            <img src="images/download-icon.png" alt="download" />
+                        </button>
+                    </div>
+
+                    
+                </div>
+
+                <button type="button" class="btn btn-light text-white my-2 my-md-4 mt-md-5 border-secondary rounded-pill fw-bold p-2 p-md-3 px-4 tooltip-custom">
+                    Mint Webster
+                    <span class="tooltiptext-custom py-md-3 px-2"><span class="bg-grey small fw-bold py-2 rounded-pill">Tax reduction (+x%)</span></span>
+                </button>
+            </div>
+
+            <div id="option-panel-sm-container" class="d-md-none">
+                <div id="option-panel-sm" class="">
+                    <div class="tab-content" id="v-pills-tabContent-sm-female">
+                    </div>
+                </div>
+            </div>
+
+            <div id="sidebar-sm" class="d-md-none nav flex-nowrap position-fixed bottom-0 start-0 bg-light w-100" id="v-pills-tab" role="tablist" aria-orientation="horizontal" style="height: 80px;">
+                
+            </div>
+        </div>     
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    
+    <script src="js/html2canvas.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+
+    <script src="js/base.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

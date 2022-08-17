@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-light bg-white mb-4 py-1">
+            <div class="container">
+                <a class="p-0" href="index.html">
+                    <img src="images/logo.png" alt="logo" />
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ms-auto">
+                        <button type="button" class="btn btn-light text-white rounded-pill d-flex align-items-center">
+                            <a href="#" class="btn btn-light text-white rounded-pill ps-1 d-flex align-items-center ms-4">
+                                <span class="bg-white rounded-circle p-1 d-flex align-items-center justify-content-center me-2" style="height: 32px; width: 32px;">
+                                    <img src="images/create-avatar-icon.png" alt="box" class="img-fluid" />
+                                </span>
+                                <span class="fw-bold">Live Soon</span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="modal fade" id="connectWalletModal" tabindex="-1" aria-labelledby="connectWalletLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 675px;"><!--  modal-dialog-centered -->
+            <div class="modal-content">
+                <div id="connectWallet" class="modal-body text-center bg-light p-5 rounded-3">
+                    <div class="col-12">
+                        <img src="images/wallet.png" alt="wallet" class="mb-4">
+                    </div>
+                    
+                    <div class="col-12">
+						<span id="showDetails" class="fw-bold"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <button id="forMysteryBtn" type="button" class="btn btn-secondary fw-bold align-items-center rounded-pill mx-auto" style="display: flex;">
+                            <span class="rounded-circle bg-white d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+                                <img src="images/create-avatar-icon.png" alt="mystery-box" class="img-fluid">
+                            </span>
+
+                            <span id="connectWalletStatus" class="mx-2 align-items-center" style="display: flex;">Connect Wallet</span>
+                        </button>
+                        
+                        <button id="showResult" data-bs-toggle="modal" data-bs-target="#purchaseBoxModal" style="display:none;">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="purchaseBoxModal" tabindex="-1" aria-labelledby="purchaseBoxLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;">
+            <div class="modal-content">
+                <div id="modal-body-video" class="modal-body d-flex align-items-center justify-content-center bg-light rounded-3" style="height: 546px; width: 998px;">
+                    <video width="400" height="400">
+                        <source src="images/box.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div id="modal-body-text" class="d-none modal-body text-center bg-light p-4 rounded-3">
+                    <div class="text-end">
+                        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close" style="height: 43px; width: 43px;"><img src="images/close-icon.png" alt="" /></button>
+                    </div>
+
+                    <h3 class="fw-bold my-4 text-center">
+                        <span><img src="images/left-lines.png" alt="."></span>
+                        Inside Mystery Box
+                        <span><img src="images/right-lines.png" alt="."></span>
+                    </h3>
+
+                    <div id="acheived" class="row row-cols-1 row-cols-md-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class=" overflow-hidden">
+        <div class="container mb-3">
+            <div class="card w-100 p-3 p-md-5 bg-primary" style="border-radius: 36px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+                <div class="row my-4">
+                    <div class="col-10 text-center mx-auto col-lg-5 col-xl-4 my-auto">
+                        <img src="images/mystery-box.png" alt="mystery-box" class="img-fluid" />
+                    </div>
+
+                    <div class="col-12 col-md-10 col-lg mx-auto mx-lg-0 mt-4 mt-lg-0">
+                        <h2 class="fw-bold mb-4 text-center text-md-start">Common Mystery Box</h2>
+                        
+                        <div class="d-flex flex-column flex-md-row align-items-center">
+                            <h5 class="m-0 mb-4">$10/Box</h5>
+                            <div class="d-flex rounded-pill border ms-md-4 p-1 mb-4">
+                                <button type="button" class="btn toggleBtnTab rounded-pill p-2 px-4 fw-bold fs-18 d-flex align-items-center text-primary bg-white" onclick="toggleBtnTab()">
+                                    <span class="me-1"><img src="images/web-3-icon.png" alt="" /></span>
+                                   <span>TWEP</span>
+                                </button>
+
+                                <button type="button" class="btn toggleBtnTab rounded-pill p-2 px-4 fw-bold fs-18 d-flex align-items-center ms-1" onclick="toggleBtnTab()">
+                                    <span class="me-1"><img src="images/bnb-icon.png" alt="" /></span>
+                                    <span>BNB</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-column flex-md-row align-items-center">
+                            <div class="border border-2 rounded-pill px-4 fw-medium d-flex align-items-center mb-4">
+                                <button id="substract" type="button" class="btn p-0 py-1 px-1 fw-bold fs-4" onclick="changeCount(this.id)">-</button>
+                                <span id="boxCount" class="mx-4 fs-3 py-1">1</span>
+                                <button id="add" type="button" class="btn p-0 py-1 px-1 fw-bold fs-4" onclick="changeCount(this.id)">+</button>
+                            </div>
+
+                            <button type="button" class="btn btn-secondary fw-bold d-flex align-items-center rounded-pill ms-md-4 mb-4">
+                                <span class="rounded-circle bg-white" style="width: 40px; height: 40px;">
+                                    <img src="images/mystery-box-sm.png" alt="mystery-box" class="img-fluid">
+                                </span>
+
+                                <span class="mx-2 ms-3 fs-18">Live Soon!</span>
+                            </button>
+                        </div>
+
+                        <h5 class="fw-normal mb-3 pt-3 text-center text-md-start">What rarities inside</h5>
+
+                        <div class="d-flex flex-wrap mb-1">
+                            <span id="common-stat" class="small mb-2"></span>
+                            <span id="rare-stat" class="small mb-2"></span>
+                            <span id="epic-stat" class="small mb-2"></span>
+                            <span id="legendary-stat" class="small mb-2"></span>
+                        </div>
+
+                        <div class="text-center text-md-start">
+                            <span id="rateDesc" data-bs-toggle="tooltip" data-bs-html="true" class="">Rate Increases based on your $TWEP balance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider">
+            <div id="slide-track" class="slide-track">
+                
+            </div>
+        </div>
+
+        <div class="container my-3 mb-5">
+            <div class="card w-100 py-5 bg-primary" style="border-radius: 36px; border-top-left-radius: 0; border-top-right-radius: 0;">
+                <h2 class="fw-bold mb-4 text-center pt-4">
+                    <span><img src="images/left-lines.png" alt="."></span>
+                    Inside Mystery Box
+                    <span><img src="images/right-lines.png" alt="."></span>
+                </h2>
+
+                <div id="carousel" class="owl-carousel mb-5 ms-md-2 ms-xl-3">
+                </div>
+
+                <div class="pb-4 mt-2"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+    <script defer src="js/owl.carousel.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/detect-provider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/upfinity-main/TheWeb3ProjectAssets/js/ethers.umd.min.js"></script>
+
+    <script src="js/base.js"></script>
+    <script defer src="main.js"></script>
+</body>
+</html>

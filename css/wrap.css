@@ -1,0 +1,116 @@
+.tooltip{      width: 200px;    }
+    .active-neumorphism {        box-shadow:  2px 2px 9px 0 rgb(17 19 20 / 90%),           -2px -2px 9px 0 rgb(93 100 112 / 90%);        background-image: linear-gradient(160deg, #424750, #202326);        text-shadow: 0 0 1px #0071bc, 0 0 4px #4db8ff, 0 0 16px #48acef, 5px 5px 6px rgb(23 25 28 / 85%), -5px -5px 6px rgb(76 82 92 / 85%);      }      .card {        border: none;      }
+    .neontext{        color: #fff;      }
+    #titano-finance #sidebar-nav li:hover {        color: #fff;      }
+    .neontext:hover{        color: #fff;        text-shadow: 0 0 1px #0071bc, 0 0 4px #4db8ff, 0 0 16px #48acef, 5px 5px 6px rgb(23 25 28 / 85%), -5px -5px 6px rgb(76 82 92 / 85%);      }
+    .table {        overflow: hidden;        border-radius: 3px;        -webkit-box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12);           -moz-box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12);                box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12);    }
+    .table > thead > tr > th {        border-bottom-color: #EEEEEE;    }
+    .table > tbody > tr > td,
+    .table > tbody > tr > th,
+    .table > thead > tr > td,
+    .table > thead > tr > th {        padding: 15px;        vertical-align: middle;        background-color: #424750;        border-top-color: #EEEEEE;    }    
+    .table > tbody > tr:hover > td {      background-color: #202326;    }
+    @media (max-width: 767px) {
+        .table-no-more,
+        .table-no-more > thead,
+        .table-no-more > thead > tr,
+        .table-no-more > thead > tr > th,
+        .table-no-more > tbody,
+        .table-no-more > tbody > tr,
+        .table-no-more > tbody > tr > td {            display: block;        }
+
+        .table-no-more > thead {            position: absolute;            top: -9999px;            left: -9999px;            opacity: 0;        }
+        .table-no-more > tbody > tr > td {            position: relative;            padding-left: 45%;        }
+        .table-no-more > tbody > tr:nth-child(even) > td {          background-image: linear-gradient(160deg, #424750, #202326);        }
+
+        .table-no-more > tbody > tr:nth-child(odd) > td {          background-image: linear-gradient(160deg, #424750, #202326);        }
+
+        .table-no-more > tbody > tr > td:before {		    position: absolute;		    top: 5px;		    left: 5%;		    width: 40%;        font-weight: bold;        }
+
+        .table-no-more > tbody > tr > td:after {            content: "";            position: absolute;            top: 0;            left: 0;            width: 40%;            height: 100%;            border-right: 1px solid #EEEEEE;        }
+
+        .table-no-more > tbody > tr > td:nth-of-type(1):before {font-size: 13px; margin-top: 12px; content: "Amount Locked";}
+        .table-no-more > tbody > tr > td:nth-of-type(2):before {font-size: 13px; margin-top: 12px; content: "Time";}
+        .table-no-more > tbody > tr > td:nth-of-type(3):before {font-size: 13px; margin-top: 12px; content: "Claim";}
+    }
+    .tabinator h2 {  text-align: center;  margin-bottom: 20px;}
+    .tabinator input {  display: none;}
+    .tabinator label {  box-sizing: border-box;  display: inline-block;  padding: 15px 25px;  color: #ccc;  margin-bottom: -1px;  margin-left: -1px;}
+    .tabinator label:hover {  color: #888;  cursor: pointer;}
+    .tabinator input:checked + label {  position: relative;  color: #000;  background: #fff;  border: 1px solid #bbb;  border-bottom: 1px solid #fff;  border-radius: 5px 5px 0 0;}
+    .tabinator input:checked + label:after {  display: block;  content: '';  position: absolute;  top: 0; right: 0; bottom: 0; left: 0;  box-shadow: 0 0 15px #939393;}
+    #content1, #content2, #content3, #content4 {  display: none;  border-top: 1px solid #bbb;}
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3,
+    #tab4:checked ~ #content4 {  display: block;  box-shadow: 0 0 15px #939393;}
+    .tabbed {  width: 100%;  min-width: 400px;  margin: 0 auto;  border-bottom: 4px solid #000;  overflow: hidden;  transition: border 250ms ease;}
+    .tabbed ul {  margin: 0px;  padding: 0px;  overflow: hidden;  float: left;  padding-left: 48px;  list-style-type: none;}
+    .tabbed ul * {  margin: 0px;  padding: 0px;}
+    .tabbed ul li {  display: block;  float: right;  padding: 10px 24px 8px;  background-color: #FFF;  margin-right: 46px;  z-index: 2;  position: relative;  cursor: pointer;  color: #777;  text-transform: uppercase;  font: 600 13px/20px roboto, "Open Sans", Helvetica, sans-serif;  transition: all 250ms ease;}
+    .tabbed ul li:before,
+    .tabbed ul li:after {  display: block;  content: " ";  position: absolute;  top: 0;  height: 100%;  width: 44px;  background-color: #FFF;  transition: all 250ms ease;}
+    .tabbed ul li:before {  right: -24px;  transform: skew(30deg, 0deg);  box-shadow: rgba(0,0,0,.1) 3px 2px 5px, inset rgba(255,255,255,.09) -1px 0;}
+    .tabbed ul li:after {  left: -24px;  transform: skew(-30deg, 0deg);  box-shadow: rgba(0,0,0,.1) -3px 2px 5px, inset rgba(255,255,255,.09) 1px 0;}
+    .tabbed ul li:hover,
+    .tabbed ul li:hover:before,
+    .tabbed ul li:hover:after {  background-color: #F4F7F9;  color: #444;}
+    .tabbed ul li.active {  z-index: 3;}
+    .tabbed ul li.active,
+    .tabbed ul li.active:before,
+    .tabbed ul li.active:after {  background-color: #000;color: #fff;}
+    .tabbed.round ul li {  border-radius: 8px 8px 0 0;}
+    .tabbed.round ul li:before {  border-radius: 0 8px 0 0;}
+    .tabbed.round ul li:after {  border-radius: 8px 0 0 0;}
+    .tabbed[class*="skin-"] ul li {  color: #FFF;  text-shadow: rgba(0,0,0,.1) 0 1px;}
+    .tabbed.skin-turquoise {  border-bottom-color: #3988bc;}
+    .tabbed.skin-turquoise ul li,
+    .tabbed.skin-turquoise ul li:before,
+    .tabbed.skin-turquoise ul li:after {  background-color: #48acef;}
+    .tabbed.skin-turquoise ul li:hover,
+    .tabbed.skin-turquoise ul li:hover:before,
+    .tabbed.skin-turquoise ul li:hover:after {  background-color: #48acef;}
+    .tabbed.skin-turquoise ul li.active,
+    .tabbed.skin-turquoise ul li.active:before,
+    .tabbed.skin-turquoise ul li.active:after {  background-color: #3988bc;}
+    @media screen and (max-width: 425px) {
+      .tabbed ul li {    display: block;    float: right;    padding: 10px 24px 8px;    background-color: #FFF;    margin-right: 6px;    z-index: 2;    position: relative;    cursor: pointer;    color: #777;    text-transform: uppercase;    font: 600 13px/20px roboto, "Open Sans", Helvetica, sans-serif;    transition: all 250ms ease;  }
+      .tabbed ul {    width: 100%;    margin: 0px;    padding: 0px;    overflow: hidden;    float: left;    padding-right: 30px;    list-style-type: none;}
+        .tabbed {    width: 100%;    min-width: 300px;    margin: 0 auto;    border-bottom: 4px solid #000;    overflow: hidden;    transition: border 250ms ease;  }
+    }
+    @media screen and (max-width: 375px) {
+      .tabbed ul li {    display: block;    float: right;    padding: 10px 20px 8px;    background-color: #FFF;    margin-right: 15px;    z-index: 2;    position: relative;    cursor: pointer;    color: #777;    text-transform: uppercase;    font: 600 10px/20px roboto, "Open Sans", Helvetica, sans-serif;    transition: all 250ms ease;  }
+      .tabbed ul {    width: 100%;    margin: 0px;    padding: 0px;    overflow: hidden;    float: left;    padding-right: 20px;    list-style-type: none;}
+        .tabbed {    width: 100%;    min-width: 300px;    margin: 0 auto;    border-bottom: 4px solid #000;    overflow: hidden;    transition: border 250ms ease;  }
+    }
+    .customcontainer {    display: flex;    color: #a2a2a2;}
+    .tabs {    margin-bottom: 28px;    display: flex;      justify-content: space-between;}
+    .tabs a {    cursor: pointer;    padding: 12px 24px;    width: 120px;    text-align: center;    font-weight: bold;    border-radius: 18px;    transition: background 0.1s, color 0.1s;    background: linear-gradient(145deg, #ffffff, #dcdcdc);    box-shadow:  3px 3px 5px #bebebe,                 -3px -3px 5px #ffffff;}
+    .darkmode .tabs a {  background-image: linear-gradient(160deg,#424750,#202326);  box-shadow: 2px 2px 9px 0 rgb(17 19 20 / 90%), -2px -2px 9px 0 rgb(93 100 112 / 90%);}
+    .tabs a:hover {    background: linear-gradient(145deg, #f4f4f4, #cecece);    color: #888;}
+    .darkmode .tabs a:hover {    background: #141414;    color: #bbb;}
+    .tabs a.active {    background-color: #f4f4f4;    color: #bdbdbd;    cursor: default;    padding: 14px 22px 10px 26px;    background: #f4f4f4;    box-shadow: inset 3px 3px 5px #cbcbcb,                inset -3px -3px 5px #ffffff;}
+    .darkmode .tabs a.active {  background-image: linear-gradient(160deg,#424750,#202326);    box-shadow: inset  3px 3px 6px #101114,                inset -3px -3px 6px #24252a;    color: #6a6a6a;}
+    .tabcontent {    padding: 46px;    min-height: 288px;    display: none;    border-radius: 18px;    background: #f4f4f4;    box-shadow:  3px 3px 6px #bebebe,                 -3px -3px 6px #ffffff;}
+    .darkmode .tabcontent {  background-image: linear-gradient(160deg, #424750, #202326);;  box-shadow: 2px 2px 9px 0 rgb(17 19 20 / 90%), -2px -2px 9px 0 rgb(93 100 112 / 90%);}
+    .content .active {    display: block;}
+    .tabcontent p {    margin-bottom: 12px;}
+    .tabcontent p:last-child {    margin-bottom: 0;}
+    .tabcontent .read-more-link a {    color: #626262;    text-decoration: none;    font-size: 0.85em;    font-weight: bold;}
+    .darkmode .tabcontent .read-more-link a {   color: #d4d4d4;}
+    .icon {    padding-left: 8px;   font-size: 16px;}
+    .dark-mode-switch {    position: absolute;    top: 16px;    right: 16px;}
+    .dark-mode-switch .switch {/*     margin-left: 4px; */}
+    .switch-label {    cursor: pointer;    font-size: 0.85em;}
+    /* the box around the slider */
+    .switch {    position: relative;    display: inline-block;    width: 44px;    height: 22px;   margin-left: 4px;}
+    /* Hide default HTML checkbox */
+    .switch input {    opacity: 0;    width: 0;    height: 0;}
+    /* The slider */
+    .slider {    position: absolute;    cursor: pointer;    top: 0;    left: 0;    right: 0;    bottom: 0;    background-color: #1A1B1F;    transition: .2s;    box-shadow:  2px 2px 3px #ffffff,                 -2px -2px 3px #bebebe;}
+    .darkmode .slider {    box-shadow:  2px 2px 3px #34353a,                 -2px -2px 3px #000104;}
+    .slider:before {    position: absolute;    content: "";    height: 18px;    width: 18px;    left: 3px;    bottom: 2px;    background: #9294b8;    -webkit-transition: .4s;    transition: .4s;}
+    input:checked + .slider {    background-color: #f4f4f4;}
+    input:checked + .slider:before {    transform: translateX(21px);}
+    .slider.round {    border-radius: 11px;}
+    .slider.round:before {    border-radius: 50%;}
